@@ -40,3 +40,10 @@ Layer 1 雙語靜態首頁已完成並經本機瀏覽器檢查；案件、執行
 - 展示文件統一「改進紀錄」，移除「網站尚未開始」的過期描述。
 - 驗證：前輪 Chrome 桌面／320px 中英文及互動檢查；本輪檢查前端與伺服器語法、提交差異與上傳版本一致性。
 - 此紀錄描述初始同步範圍；是否成功以 Git 提交、push 與遠端查核為準。
+
+## 公開 repo 與 GitHub Pages
+- 依使用者要求將 vcstseng/evolving-ai 由 private 改為 public。
+- 啟用 GitHub Actions 型 Pages，網址：https://vcstseng.github.io/evolving-ai/ 。
+- 新增 .github/workflows/pages.yml：Node 22 語法檢查、建立最小靜態 artifact、部署 Pages。
+- 公開內容仍為 Layer 1 UI 原型，示意案例未執行；本次未新增研究結果。
+- 部署狀態由 GitHub Actions 與公開網址查核；歷史 private／本機限定紀錄保留為當時狀態。

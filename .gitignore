@@ -14,3 +14,6 @@ __pycache__/
 node_modules/
 .DS_Store
 Thumbs.db
+
+# Generated Pages artifact
+_site/

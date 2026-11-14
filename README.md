@@ -6,7 +6,7 @@ AI 組織能力發展研究。工作名稱：Evolving AI Consulting Firm。
 
 ## 目前進度
 
-Layer 1 中英文首頁原型已完成，延續 Startup Radar／Capability Store 的視覺風格。目前只有本機靜態 UI，尚未選定或執行研究案件，沒有自主 Agent 執行器或實驗結果。
+Layer 1 中英文首頁原型已完成，延續 Startup Radar／Capability Store 的視覺風格。目前為靜態 UI 原型，尚未選定或執行研究案件，沒有自主 Agent 執行器或實驗結果。
 
 - 案件、組織與能力、改進紀錄三個入口，使用預覽對話框。
 - 五階段互動：提出問題 → 提出方案 → 外部審查 → 診斷與調整 → 驗證重用。
@@ -59,4 +59,8 @@ node --check web/serve.mjs
 
 私有資料、金鑰與原始執行紀錄不納入 Git。`data/private/` 與 `runs/` 只保留使用說明。未經確認授權，不傳送私有資料給外部模型。
 
-GitHub：本 repo 用於同步程式與研究文件。尚未設定 Pages 或其他公開網站部署。
+GitHub：公開 repo https://github.com/vcstseng/evolving-ai 。
+
+網站：https://vcstseng.github.io/evolving-ai/ （英文：?lang=en）。
+
+GitHub Pages 透過 `.github/workflows/pages.yml` 發布，main 的 web/ 或 workflow 更新觸發部署。只上傳 index.html、app.js 與 styles.css；本機伺服器、研究文件與資料不納入網站 artifact。

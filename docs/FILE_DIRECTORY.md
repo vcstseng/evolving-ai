@@ -5,6 +5,9 @@
 
 ```text
 evolving-ai/
+  .github/
+    workflows/
+      pages.yml
   .gitattributes
   .gitignore
   AGENTS.md
@@ -63,4 +66,6 @@ evolving-ai/
 - src/、tests/：預留研究執行器與測試；網站程式位於 web/src/。
 - .gitattributes：文字 LF 與 PNG binary 規則。
 
-GitHub 初始同步：private repo，未設定網站部署。
+GitHub 目前為 public；Pages 發布 Layer 1 靜態首頁。
+
+- .github/workflows/pages.yml：main 分支網站更新時檢查語法並部署 Pages。
