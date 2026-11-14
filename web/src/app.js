@@ -1,4 +1,4 @@
-import { renderCase } from './case.js';
+import { renderCase } from './case.js?v=26f3e68';
 import { attachWorkflow } from './workflow.js';
 import { attachProposalV2 } from './proposal-v2.js';
 import { renderCases } from './cases.js';

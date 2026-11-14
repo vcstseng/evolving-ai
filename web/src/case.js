@@ -1,5 +1,5 @@
 import { renderV2Shell, versionLinks } from './proposal-v2.js';
-import { renderGenerationTrail, renderReview, renderCandidate } from './evolution.js';
+import { renderGenerationTrail, renderReview, renderCandidate } from './evolution.js?v=26f3e68';
 export function renderCase(lang,version='v2'){
 const isV2=version!=='v1';
 const t=(zh,en)=>lang==='zh'?zh:en;
