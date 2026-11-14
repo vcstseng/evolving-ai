@@ -57,3 +57,7 @@ web/evidence/gen2-checks.json 是程式測試結果摘要；f03-gen2-calculation
 
 ## 後續：同案重跑已完成
 本文件前述待重跑狀態是方法實作完成時的紀錄。其後已完成 f03-gen2-20261115-01 六步半自動交付並保存 v2。六次提交、無拒收，CD 仍選補證據，沒有使用 no_gap。v2 的有界調查是未批准提案，沒有現場執行。Claude 複審與未見重用仍待進行。詳 web/evidence/f03/v2/ 及 docs/PROGRESS.md 最新紀錄。
+
+
+## 後續：方法覆蓋與可比性邊界
+三個公開合成情境的工具檢查已執行，詳 web/evidence/method-probe/。方法保持 5fe2987 不變。Gen 2 能輸出彈性基準與順序敏感度，但不解析本次提供的 hourly_rate_comparison 語意，因此漏掉明示的兩期工資率定義衝突。空 availability gaps 僅表示目前檢查所要求的宣告存在，不是 no_gap 決策充分條件。此輪不改 Gen 2、不跑 CD，也不替 Claude 驗收。不能將這些公開 fixture 納入後續未見測試。

@@ -1,0 +1,5 @@
+[
+  {"id":"volume","metadata":"metadata.json","costs":{"baseline":"1000","actual":"2200","variance":"1200"},"extra":{"totals.volume_effect":"1000","totals.non_volume_variance":"200"}},
+  {"id":"order","metadata":"metadata.json","costs":{"baseline":"1000","actual":"6000","variance":"5000"},"extra":{"sensitivity.effects.hours_per_unit.min":"1000","sensitivity.effects.hours_per_unit.max":"3000","sensitivity.effects.hourly_rate.min":"2000","sensitivity.effects.hourly_rate.max":"4000","sensitivity.hours_largest_in_every_order":false}},
+  {"id":"definition","metadata":"definition-metadata.json","costs":{"baseline":"1000","actual":"1500","variance":"500"},"required_gap":"hourly_rate_comparability"}
+]

@@ -1,0 +1,256 @@
+{
+  "schema": 1,
+  "protocol": "method-probe-v1",
+  "date": "2026-11-15",
+  "method_commit": "5fe298720eefccc9b5e282b6a305b0d18cbb8d51",
+  "scope": "public synthetic deterministic development probe; not unseen agent evaluation",
+  "repetitions_per_method_per_case": 1,
+  "model_calls": 0,
+  "claude_v2_review": "pending",
+  "unseen_test": false,
+  "source_sha256_lf": {
+    "src/cost_analysis.py": "b2d4f3565235ff96af98b41d53b24c0dd307a19949dbe2a57e556414e62334cf",
+    "src/gen2_analysis.py": "9700bbaaee869297bf178c58fb7d966914bfb0fa3f4eae3abb9aef502952e702"
+  },
+  "input_sha256_lf": {
+    "definition-metadata.json": "dc2dc86c3ee4c1aec272207c945b04bfad1831ee6484808e205e725a8e620270",
+    "definition.csv": "f340a65e83e1cfe4c7ed4d3e0897fbacdefdc6cdab2bcbd7e9ed6ce9e0902819",
+    "expectations.json": "bf30e597516b8a8cd072bc96ab309d09c9c8ebc68a0d46c135429d2b1907ccc3",
+    "metadata.json": "aca6d24cb7a155682d75a8cbfbebe5b4482e5a6523b70537a9abf6a8ce0c6ec5",
+    "order.csv": "846063974073c8c1335541511279c6f3fa0069c54eb7240c83ea994de266bf95",
+    "protocol.md": "281eeee5995220f44c27ffc42551767770da84096261ac1c09207ae3cc788cef",
+    "volume.csv": "f4fe69ee2adca285136ddd74254f04f112eb915c5e3e94e9f64d44eac2ebe088"
+  },
+  "cases": [
+    {
+      "id": "volume",
+      "common_cost_checks": {
+        "baseline": {
+          "gen1": {
+            "expected": "1000",
+            "actual": "1000",
+            "status": "matched"
+          },
+          "gen2": {
+            "expected": "1000",
+            "actual": "1000",
+            "status": "matched"
+          }
+        },
+        "actual": {
+          "gen1": {
+            "expected": "2200",
+            "actual": "2200.0",
+            "status": "matched"
+          },
+          "gen2": {
+            "expected": "2200",
+            "actual": "2200",
+            "status": "matched"
+          }
+        },
+        "variance": {
+          "gen1": {
+            "expected": "1200",
+            "actual": "1200.0",
+            "status": "matched"
+          },
+          "gen2": {
+            "expected": "1200",
+            "actual": "1200",
+            "status": "matched"
+          }
+        }
+      },
+      "additional_checks": {
+        "totals.volume_effect": {
+          "gen1": {
+            "expected": "1000",
+            "actual": null,
+            "status": "not_reported"
+          },
+          "gen2": {
+            "expected": "1000",
+            "actual": "1000",
+            "status": "matched"
+          }
+        },
+        "totals.non_volume_variance": {
+          "gen1": {
+            "expected": "200",
+            "actual": null,
+            "status": "not_reported"
+          },
+          "gen2": {
+            "expected": "200",
+            "actual": "200",
+            "status": "matched"
+          }
+        }
+      },
+      "semantic_gap_check": null,
+      "gen2_availability_gap_ids": []
+    },
+    {
+      "id": "order",
+      "common_cost_checks": {
+        "baseline": {
+          "gen1": {
+            "expected": "1000",
+            "actual": "1000",
+            "status": "matched"
+          },
+          "gen2": {
+            "expected": "1000",
+            "actual": "1000",
+            "status": "matched"
+          }
+        },
+        "actual": {
+          "gen1": {
+            "expected": "6000",
+            "actual": "6000",
+            "status": "matched"
+          },
+          "gen2": {
+            "expected": "6000",
+            "actual": "6000",
+            "status": "matched"
+          }
+        },
+        "variance": {
+          "gen1": {
+            "expected": "5000",
+            "actual": "5000",
+            "status": "matched"
+          },
+          "gen2": {
+            "expected": "5000",
+            "actual": "5000",
+            "status": "matched"
+          }
+        }
+      },
+      "additional_checks": {
+        "sensitivity.effects.hours_per_unit.min": {
+          "gen1": {
+            "expected": "1000",
+            "actual": null,
+            "status": "not_reported"
+          },
+          "gen2": {
+            "expected": "1000",
+            "actual": "1000",
+            "status": "matched"
+          }
+        },
+        "sensitivity.effects.hours_per_unit.max": {
+          "gen1": {
+            "expected": "3000",
+            "actual": null,
+            "status": "not_reported"
+          },
+          "gen2": {
+            "expected": "3000",
+            "actual": "3000",
+            "status": "matched"
+          }
+        },
+        "sensitivity.effects.hourly_rate.min": {
+          "gen1": {
+            "expected": "2000",
+            "actual": null,
+            "status": "not_reported"
+          },
+          "gen2": {
+            "expected": "2000",
+            "actual": "2000",
+            "status": "matched"
+          }
+        },
+        "sensitivity.effects.hourly_rate.max": {
+          "gen1": {
+            "expected": "4000",
+            "actual": null,
+            "status": "not_reported"
+          },
+          "gen2": {
+            "expected": "4000",
+            "actual": "4000",
+            "status": "matched"
+          }
+        },
+        "sensitivity.hours_largest_in_every_order": {
+          "gen1": {
+            "expected": false,
+            "actual": null,
+            "status": "not_reported"
+          },
+          "gen2": {
+            "expected": false,
+            "actual": false,
+            "status": "matched"
+          }
+        }
+      },
+      "semantic_gap_check": null,
+      "gen2_availability_gap_ids": []
+    },
+    {
+      "id": "definition",
+      "common_cost_checks": {
+        "baseline": {
+          "gen1": {
+            "expected": "1000",
+            "actual": "1000",
+            "status": "matched"
+          },
+          "gen2": {
+            "expected": "1000",
+            "actual": "1000",
+            "status": "matched"
+          }
+        },
+        "actual": {
+          "gen1": {
+            "expected": "1500",
+            "actual": "1500",
+            "status": "matched"
+          },
+          "gen2": {
+            "expected": "1500",
+            "actual": "1500",
+            "status": "matched"
+          }
+        },
+        "variance": {
+          "gen1": {
+            "expected": "500",
+            "actual": "500",
+            "status": "matched"
+          },
+          "gen2": {
+            "expected": "500",
+            "actual": "500",
+            "status": "matched"
+          }
+        }
+      },
+      "additional_checks": {},
+      "semantic_gap_check": {
+        "required_gap": "hourly_rate_comparability",
+        "gen1": "not_reported",
+        "gen2": "not_detected",
+        "scope": "Requested semantic comparison is outside the implemented evidence checks."
+      },
+      "gen2_availability_gap_ids": []
+    }
+  ],
+  "limitations": [
+    "No agent handoffs, proposal review, token-budget comparison or business outcome.",
+    "Missing outputs are not arithmetic errors; no aggregate win rate is assigned.",
+    "Authors know the fixtures and expectations; this is not an independent evaluation.",
+    "Empty availability gaps do not establish semantic comparability.",
+    "The methods remain unchanged after observing the boundary failure."
+  ]
+}

@@ -173,3 +173,12 @@ UI／UX 整理沿用 web/src/app.js、cases.js、case.js 與 styles.css；沒有
 - runs/f03-gen2-20261115-01/：原始執行與交付，只在本機、Git 忽略。
 
 - presentation/f03-v2-desktop.png：方案 v2、版本切換及新成本拆分的桌面截圖。
+
+
+## 固定方法重用與邊界檢查
+- web/evidence/method-probe/：事前 protocol.md、三個合成 CSV、一般／定義衝突 metadata、expectations.json、整理結果 results.md／results.json；不是原始角色執行紀錄或未見案件。
+- scripts/check_method_probe.py：固定兩代方法與來源指紋，重算三題並核對公開結果；未檢出的語意缺口保留為觀察，重現成功不表示缺口解決。
+- web/src/evolution.js：沿用現有重跑比較區塊，顯示三列表與證據連結。
+- .github/workflows/pages.yml：發布前加入上述結果重現檢查。
+- web/src/app.js：等案件內容載入後恢復頁內直達位置。
+- presentation/method-probe-desktop.png：三個公開合成情境的結果桌面截圖。

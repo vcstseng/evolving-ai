@@ -1,0 +1,9 @@
+{
+  "synthetic": true,
+  "periods": {
+    "baseline": {"start": "2026-09-01", "end": "2026-09-30"},
+    "actual": {"start": "2026-10-01", "end": "2026-10-30"}
+  },
+  "definitions": {"units": "Completed units, same definition in both periods", "hours_per_unit": "Recorded direct labor hours per completed unit"},
+  "operational_records": [{"reference": "synthetic-declaration-only", "description": "Fixture reference, not independently verified operational evidence"}]
+}

@@ -34,7 +34,11 @@ if(new URLSearchParams(location.search).get('view')==='case'&&new URLSearchParam
  document.title=lang==='zh'?'F03 製造成本案件｜The Evolving Firm':'F03 Manufacturing cost | The Evolving Firm';
  const version=new URLSearchParams(location.search).get('proposal')==='v1'?'v1':'v2';
  document.title=`F03 ${version} | The Evolving Firm`;
- $('#app').innerHTML=renderCase(lang,version);attachWorkflow(lang);attachProposalV2(lang);return;
+ $('#app').innerHTML=renderCase(lang,version);
+ // Restore deep links after loaded proposal and history content change the layout.
+ Promise.all([attachWorkflow(lang),attachProposalV2(lang)]).then(()=>{
+   if(location.hash)document.getElementById(location.hash.slice(1))?.scrollIntoView();
+ });return;
 }
 
 document.documentElement.lang=lang==='zh'?'zh-Hant':'en';document.title=t('The Evolving Firm｜AI 組織能力發展研究','The Evolving Firm | Research on organizational capabilities');

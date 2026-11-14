@@ -6,6 +6,8 @@ AI 組織能力發展研究。工作名稱：Evolving AI Consulting Firm。
 
 ## 目前進度
 
+最新：完成三個公開合成情境的固定方法檢查。兩代成本計算皆符合預期；Gen 2 提供產量分離與順序敏感度，但未檢出明示的工資率定義衝突。這是工具覆蓋檢查，不是未見 Agent 實驗；F03 v2 仍待 Claude 複審。詳 [規則](web/evidence/method-probe/protocol.md)／[結果與盲點](web/evidence/method-probe/results.md)。
+
 Layer 1 中英文首頁原型已完成，延續 Startup Radar／Capability Store 的視覺風格。Layer 2 已加入 F03 歷史合成案例整理，含方案與 Claude 驗證交付材料；已加入本機半自動案件交接器，完成 Gen 1 與 Gen 2 的同案交付；尚無自主 LLM 調度、獨立多 Agent、能力演化或企業成效結果。
 
 - 案件列表可依狀態篩選並進入 F03 詳情；組織仍有預覽說明，改進入口已連至 Gen 2 候選計畫。

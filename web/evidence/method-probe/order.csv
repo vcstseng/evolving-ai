@@ -1,0 +1,3 @@
+product,period,units,material_per_unit,material_price,hours_per_unit,hourly_rate,overhead_per_unit
+Synthetic B,baseline,100,0,0,1,10,0
+Synthetic B,actual,100,0,0,2,30,0
