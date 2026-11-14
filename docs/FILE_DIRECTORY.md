@@ -46,6 +46,7 @@ evolving-ai/
     README.md
   scripts/
     check_f03.py
+    check_versions.py
   src/
   tests/
   web/
@@ -56,8 +57,16 @@ evolving-ai/
       f03-costs.csv
       f03-summary.md
       f03-provenance.json
+      f03/
+        v1/
+          brief.md
+          proposal.md
+          f03-costs.csv
+          f03-provenance.json
+          manifest.json
     src/
       case.js
+      cases.js
       app.js
       styles.css
 ```
@@ -90,3 +99,9 @@ GitHub 目前為 public；Pages 發布雙語首頁、案件頁與合成證據。
 - presentation/f03-case-desktop.png：案件頁桌面檢查截圖。
 
 方案優先調整：web/src/case.js 呈現方案、Claude 審查與修改；web/evidence/f03-summary.md 是方案與審查說明，CSV 為選用佐證。cases/templates/CASE_BRIEF.md 與 reviews/templates/REVIEW.md 已同步交付與審查規則。Layer 2 隨網站部署一併發布。
+
+- web/src/cases.js：雙語案件登錄與狀態篩選；首頁、列表、案件相互導覽。
+- web/evidence/f03/v1/：固定文件版本，保留題目／方案／選用佐證及來源與 SHA-256。
+- scripts/check_versions.py：核對固定 manifest 與檔案完整性。
+
+- presentation/case-register-desktop.png：案件列表桌面驗證截圖。

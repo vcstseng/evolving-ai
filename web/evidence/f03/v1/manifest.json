@@ -1,0 +1,30 @@
+{
+  "case_id": "f03",
+  "snapshot_id": "f03-v1",
+  "proposal_version": "v1",
+  "frozen_on": "2026-11-15",
+  "source_commit": "9bb4ea80a10ea6b2e1bd60a0a3eced59b69f8d53",
+  "kind": "historical_synthetic",
+  "review_status": "awaiting_claude",
+  "parent": null,
+  "change_reason": "Freeze the existing published proposal without incorporating internal simulated review.",
+  "files": [
+    {
+      "path": "brief.md",
+      "sha256": "10a174f203f3fcfe09eed6492f5a1086431ff94b315c6e46f6eee614f7066c87"
+    },
+    {
+      "path": "f03-costs.csv",
+      "sha256": "99a35ba5f895e766505000d6f69c739134e2fc06e06729cf6172377df3c34d42"
+    },
+    {
+      "path": "f03-provenance.json",
+      "sha256": "b6235d6eee6a0c196c8201e9d396b7603a52b826c7bcba48ce021c6baf1093a7"
+    },
+    {
+      "path": "proposal.md",
+      "sha256": "4a016d07ea4e8c29d1e9da25c52ac3f73a1efcfcf02b9db9a6b0639c5c72b51a"
+    }
+  ],
+  "text_format": "UTF-8; line endings normalized to LF; proposal content unchanged from source commit."
+}

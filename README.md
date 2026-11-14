@@ -8,7 +8,7 @@ AI 組織能力發展研究。工作名稱：Evolving AI Consulting Firm。
 
 Layer 1 中英文首頁原型已完成，延續 Startup Radar／Capability Store 的視覺風格。Layer 2 已加入 F03 歷史合成案例整理，含方案與 Claude 驗證交付材料；尚未執行新的演化研究，沒有自主 Agent 執行器或實驗結果。
 
-- 案件入口連至 F03 詳情；組織與能力、改進紀錄仍為預覽對話框。
+- 案件列表可依狀態篩選並進入 F03 詳情；組織與能力、改進紀錄仍為預覽對話框。
 - 五階段互動：提出問題 → 提出方案 → 外部審查 → 診斷與調整 → 驗證重用。
 - 示意案例與研究狀態明確標示；三種證據分開說明。
 - 問題與組織雙版本、可點選的交叉測試矩陣；矩陣結果完全虛構，非研究成果。
@@ -80,3 +80,10 @@ GitHub Pages 透過 `.github/workflows/pages.yml` 發布，main 的 web/ 或 wor
 執行 `python scripts/check_f03.py` 可獨立重算總額、六項順序差異並核對 CSV 雜湊；這只驗證算術一致性。
 
 交付依問題定義：方案本身可為完整成果，不要求每題都有 CSV、程式或附件。案件頁以方案 → Claude 審查 → 後續修改為主線。發布狀態以 GitHub Pages 最新部署為準。
+
+## 案件列表與保留版本
+[案件列表](https://vcstseng.github.io/evolving-ai/?lang=zh&view=cases) 依待解題、待審查、修改中與待重用測試篩選。目前僅 F03 歷史合成案例，Claude 審查待執行，沒有填入未執行的假案件。
+
+`web/evidence/f03/v1/` 固定既有題目、限制、方案文件與選用資料，文字統一 LF；`manifest.json` 記錄來源提交與 SHA-256。v1 是文件快照，不是 Agent 世代。後續修改另存新版本，保留來源審查、理由與分歧，不覆寫 v1。執行 `python scripts/check_versions.py` 核對保留內容完整性。
+
+案件閱讀順序為問題 → 方案 → 審查與修改 → 版本與組織 → 歷史過程。內部模擬自查不算 Claude 審查，未用來改寫固定方案。
