@@ -1,0 +1,117 @@
+{
+  "scope": "Known-answer F03 tool regression only; not a complete Gen 2 case run.",
+  "source": "web/evidence/f03/v1/f03-costs.csv",
+  "source_sha256": "99a35ba5f895e766505000d6f69c739134e2fc06e06729cf6172377df3c34d42",
+  "calculation": {
+    "totals": {
+      "baseline": "166000",
+      "actual": "225300",
+      "variance": "59300",
+      "flex_baseline": "188000",
+      "volume_effect": "22000",
+      "non_volume_variance": "37300"
+    },
+    "fixed_order": [
+      "units",
+      "material_price",
+      "material_per_unit",
+      "hourly_rate",
+      "hours_per_unit",
+      "overhead_per_unit"
+    ],
+    "fixed_effects": {
+      "units": "22000",
+      "material_price": "-6000",
+      "material_per_unit": "-2700",
+      "hourly_rate": "4000",
+      "hours_per_unit": "42000",
+      "overhead_per_unit": "0"
+    },
+    "by_product": [
+      {
+        "product": "定位器 Y",
+        "baseline": "56000",
+        "actual": "61200",
+        "flex_baseline": "56000",
+        "volume_effect": "0",
+        "non_volume_variance": "5200",
+        "effects": {
+          "units": "0",
+          "material_price": "0",
+          "material_per_unit": "0",
+          "hourly_rate": "1000",
+          "hours_per_unit": "4200",
+          "overhead_per_unit": "0"
+        }
+      },
+      {
+        "product": "驅動馬達 X",
+        "baseline": "110000",
+        "actual": "164100",
+        "flex_baseline": "132000",
+        "volume_effect": "22000",
+        "non_volume_variance": "32100",
+        "effects": {
+          "units": "22000",
+          "material_price": "-6000",
+          "material_per_unit": "-2700",
+          "hourly_rate": "3000",
+          "hours_per_unit": "37800",
+          "overhead_per_unit": "0"
+        }
+      }
+    ],
+    "sensitivity": {
+      "orders": 720,
+      "effects": {
+        "units": {
+          "min": "20550",
+          "max": "28800",
+          "mean": "24616.666666666667",
+          "mean_fraction": "73850/3"
+        },
+        "material_price": {
+          "min": "-6000",
+          "max": "-4750",
+          "mean": "-5358.333333333333",
+          "mean_fraction": "-16075/3"
+        },
+        "material_per_unit": {
+          "min": "-3000",
+          "max": "-2250",
+          "mean": "-2608.333333333333",
+          "mean_fraction": "-7825/3"
+        },
+        "hourly_rate": {
+          "min": "3500",
+          "max": "6000",
+          "mean": "4700",
+          "mean_fraction": "4700"
+        },
+        "hours_per_unit": {
+          "min": "34000",
+          "max": "42000",
+          "mean": "37950",
+          "mean_fraction": "37950"
+        },
+        "overhead_per_unit": {
+          "min": "0",
+          "max": "0",
+          "mean": "0",
+          "mean_fraction": "0"
+        }
+      },
+      "hours_largest_in_every_order": true,
+      "adverse_drivers_by_mean": [
+        "hours_per_unit",
+        "units",
+        "hourly_rate"
+      ]
+    },
+    "limitations": [
+      "Flexible baseline assumes the supplied per-unit cost model; it does not distinguish true fixed costs.",
+      "Order means are rounded to 12 decimal places; mean_fraction retains the exact rational value.",
+      "Accounting attribution and priority signals do not establish causes, avoidable waste or savings."
+    ]
+  }
+}

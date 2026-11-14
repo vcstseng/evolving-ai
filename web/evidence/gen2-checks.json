@@ -1,0 +1,31 @@
+{
+  "schema": 1,
+  "generation": "gen2-candidate-1",
+  "date": "2026-11-15",
+  "status": "code_checks_passed",
+  "command": "python -m unittest discover -s tests -v",
+  "tests": {
+    "total": 24,
+    "gen1": 10,
+    "gen2": 14,
+    "failures": 0,
+    "errors": 0
+  },
+  "scope": "Unit tests and synthetic workflow fixtures; not a model-driven F03 case rerun or independent review.",
+  "full_case_rerun": false,
+  "proposal_v2_exists": false,
+  "external_review": "not_submitted",
+  "cross_case_reuse": "not_tested",
+  "hash_format": "SHA-256 of UTF-8 source with CRLF normalized to LF",
+  "source_hashes": {
+    "src/gen2_analysis.py": "9700bbaaee869297bf178c58fb7d966914bfb0fa3f4eae3abb9aef502952e702",
+    "src/gen2_workflow.py": "b491462f8678710575622765fd5c4b6b5f723e861384bbe529cc2e6587c343e9",
+    "organization/roles/gen2.json": "8307f18d48b58b87c8e4c940db541c4fcc5cbf47d6e4eb2d2c81b9a443e8b568",
+    "tests/test_gen2.py": "36b9e62651f1e70d6bc9fb0cb73147343c4187a9f6bfbd2ada3ce6c7dfc9b4d0"
+  },
+  "known_open_items": [
+    "Per-run budget only; case/experiment ledger is not implemented.",
+    "Shared-context manual model handoffs; no independent model execution.",
+    "No semantic guarantee for prose claims; numeric-literal and structured-field checks do not detect every unsupported claim."
+  ]
+}

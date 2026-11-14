@@ -18,6 +18,7 @@ evolving-ai/
   cases/
     active/
       f03-pilot.json
+      f03-gen2.json
     completed/
     templates/
       CASE_BRIEF.md
@@ -27,6 +28,7 @@ evolving-ai/
     public/
   docs/
     LOCAL_WORKFLOW.md
+    GEN2_IMPLEMENTATION.md
     CONCEPT.md
     FILE_DIRECTORY.md
     PROGRESS.md
@@ -37,6 +39,7 @@ evolving-ai/
   organization/
     roles/
       pilot.json
+      gen2.json
     versions/
       GEN1.md
       GEN2_CANDIDATE.md
@@ -56,8 +59,11 @@ evolving-ai/
     __init__.py
     workflow.py
     cost_analysis.py
+    gen2_workflow.py
+    gen2_analysis.py
   tests/
     test_workflow.py
+    test_gen2.py
   web/
     index.html
     package.json
@@ -65,6 +71,8 @@ evolving-ai/
     evidence/
       f03-workflow.json
       f03-review.md
+      gen2-checks.json
+      f03-gen2-calculation.json
       f03-costs.csv
       f03-summary.md
       f03-provenance.json
@@ -140,3 +148,14 @@ UI／UX 整理沿用 web/src/app.js、cases.js、case.js 與 styles.css；沒有
 - organization/versions/GEN1.md、GEN2_CANDIDATE.md：受審查基線與未實作候選的區分。
 
 - presentation/gen2-candidate-desktop.png：候選方法、世代／方案區分的桌面檢查截圖。
+
+## Gen 2 方法實作新增
+- src/gen2_analysis.py：動態資料可用性、產量與產品拆分、720 種順序及 Shapley 敏感度。
+- src/gen2_workflow.py：獨立 Gen 2 runner、no_gap、CD 輸入與數值一致性約束；原 src/workflow.py 保留 Gen 1。
+- organization/roles/gen2.json、cases/active/f03-gen2.json：Gen 2 契約及已知合成回歸案件設定。
+- tests/test_gen2.py：十四項新測試；合成 fixture 不是未見研究案例。
+- docs/GEN2_IMPLEMENTATION.md：操作方式、數值約束及尚未完成範圍。
+- web/evidence/gen2-checks.json：24 項測試摘要及正規化文字來源雜湊。
+- web/evidence/f03-gen2-calculation.json：已知 F03 的工具回歸輸出，不是完整案件重跑。
+
+- presentation/gen2-code-checks-desktop.png：程式檢查與待案件重跑比較的桌面截圖。

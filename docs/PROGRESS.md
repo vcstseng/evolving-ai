@@ -119,3 +119,17 @@ Layer 1 雙語靜態首頁已完成並經本機瀏覽器檢查；Layer 2 已整�
 - 固定方案 v1 與審查前執行摘要不變；舊 pending 只作歷史快照，當前頁面解釋審查已收到。執行器仍是 Gen 1，沒有方案 v2、新 Agent 或已驗證的新能力。
 
 - 本輪驗證：中英文世代路徑、首頁直達候選、案件修訂狀態、五列未測比較正常；320px 無橫向溢出、未見瀏覽器錯誤。JS 語法與固定 v1 完整性檢查通過。截圖 presentation/gen2-candidate-desktop.png。
+
+## 2026-11-15｜Gen 2 方法實作與程式驗證
+- 新增獨立 src/gen2_workflow.py、gen2_analysis.py、organization/roles/gen2.json 與 cases/active/f03-gen2.json；原 Gen 1 程式／契約／run 與固定方案 v1 保持不變。
+- C01：實際解析欄位、日期與定義／證據宣告，動態回報缺口；格式及存在檢查不等於來源真實性核實。
+- C02：CD 取得 evidence／finance／proposal 及事件拒收摘要；允許空 gaps 與 no_gap，但不得隱藏未解的資料可用性缺口。
+- C03：分產品差異、實際產量基準、720 順序敏感度與精確有理數 Shapley 平均。F03 工具回歸：基準 188000、剩餘差異 37300；工時歸因 34000–42000、平均 37950，仍是歸因而非因果或節省。
+- C04：一般 submit 不可提交 evidence／finance；數值模板與工具重算一致才能接受。此 pilot 將阿拉伯數字限制在 numeric_claims，不是完整自然語言語意查核。
+- tool 的缺依賴／來源變更等拒收已統一留存。單一 run 之外的總預算與鎖崩潰復原未在這輪擴充。
+- 測試：24 項全通過（原 Gen 1 十項、Gen 2 十四項），含合成 no_gap、矛盾診斷、數值偽造、來源變更及拒收路徑。公開 gen2-checks.json 與 f03-gen2-calculation.json 是測試／計算摘要，不是原始執行紀錄。
+- 完整模型角色重跑、方案 v2、外部複審、未見重用與普通 Agent 對照尚未完成。網頁只同步已實作及程式測試狀態，不預填解題改善。
+
+- 網頁同步驗證：中英文方法實作狀態、測試摘要／工具回歸連結及待案件重跑比較正常；320px 無橫向溢出，未見瀏覽器錯誤。
+
+- 截圖：presentation/gen2-code-checks-desktop.png；測試摘要內正規化來源雜湊已核對。

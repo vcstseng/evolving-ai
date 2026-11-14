@@ -1,0 +1,125 @@
+{
+  "version": "gen2-candidate-1",
+  "provenance": "Adapted from Consulting Agent Framework A01/A02/A06/A08 role contracts. Only this bounded pilot slice is implemented; not all 16 roles.",
+  "roles": {
+    "A01": {
+      "layer": "case_integration",
+      "name": "案件整合",
+      "responsibility": "界定決策與限制，選擇需要的專業，整合證據、分歧與下一步；無企業實施授權。"
+    },
+    "A02": {
+      "layer": "specialist_execution",
+      "name": "證據與資料",
+      "responsibility": "核對來源、資料可用性與限制；缺少資料不得自行補造。"
+    },
+    "A06": {
+      "layer": "specialist_execution",
+      "name": "財務分析",
+      "responsibility": "用計算工具解釋成本差異，區分會計歸因、因果與可節省額。"
+    },
+    "A08": {
+      "layer": "specialist_execution",
+      "name": "營運分析",
+      "responsibility": "提出可反駁的根因假設、所需證據與小範圍下一步，不承諾改善。"
+    },
+    "CD": {
+      "layer": "capability_development",
+      "name": "能力發展",
+      "responsibility": "依實際交付診斷缺口，選擇補資料、改方法、工具或分工；新角色先列候選，不直接宣稱能力。"
+    }
+  },
+  "tasks": [
+    {
+      "id": "scope",
+      "role": "A01",
+      "depends": [],
+      "fields": [
+        "decision",
+        "assignments",
+        "constraints",
+        "stop_conditions"
+      ],
+      "instruction": "界定本次解題，說明為何選 A02/A06/A08 及何時停止。"
+    },
+    {
+      "id": "evidence",
+      "role": "A02",
+      "depends": [
+        "scope"
+      ],
+      "fields": [
+        "source_refs",
+        "quality_checks",
+        "gaps",
+        "permitted_uses"
+      ],
+      "instruction": "核對已授權的合成資料來源、可用欄位與未知；schema 可算不代表根因可知。"
+    },
+    {
+      "id": "finance",
+      "role": "A06",
+      "depends": [
+        "evidence"
+      ],
+      "fields": [
+        "calculation",
+        "interpretation",
+        "limitations"
+      ],
+      "instruction": "以程式重算差異，再指出財務解讀的界線。"
+    },
+    {
+      "id": "operations",
+      "role": "A08",
+      "depends": [
+        "finance"
+      ],
+      "fields": [
+        "hypotheses",
+        "required_evidence",
+        "disconfirming_tests",
+        "next_actions"
+      ],
+      "instruction": "將財務差異轉成可查證的營運假設，寫出能推翻假設的觀察。"
+    },
+    {
+      "id": "proposal",
+      "role": "A01",
+      "depends": [
+        "scope",
+        "evidence",
+        "finance",
+        "operations"
+      ],
+      "fields": [
+        "recommendation",
+        "alternatives",
+        "evidence_refs",
+        "limitations",
+        "next_actions",
+        "human_decisions",
+        "disagreements",
+        "numeric_claims"
+      ],
+      "instruction": "整合為待外部審查的方案；保留未知、分歧及人工決策，不寫成企業已採用。 數值使用 numeric_claims_template，敘述不得填入阿拉伯數字，以免與工具脫鉤。"
+    },
+    {
+      "id": "diagnosis",
+      "role": "CD",
+      "depends": [
+        "evidence",
+        "finance",
+        "proposal"
+      ],
+      "fields": [
+        "gaps",
+        "decision",
+        "reason",
+        "evidence_refs",
+        "capability_status",
+        "next_check"
+      ],
+      "instruction": "結合 evidence、finance、proposal 與 event_summary 診斷。沒有缺口可交付 gaps: [] 與 decision: no_gap；不把資料宣告等同真實驗證。"
+    }
+  ]
+}

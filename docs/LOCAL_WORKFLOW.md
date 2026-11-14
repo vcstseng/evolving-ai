@@ -54,3 +54,6 @@ export 只輸出欄位白名單到 web/evidence/f03-workflow.json：角色／步
 
 ## 審查後的當前狀態
 使用者於 2026-11-15 轉貼 Claude 針對 c002556 的審查。上面的 pending 與無回覆描述屬於原 run 快照，不是現在網站狀態。當前已收到指出缺陷的審查，網頁呈現 Gen 2 候選方法計畫；本文件描述的 runner 仍是 Gen 1，已知固定缺口、無 no_gap、可繞過計算等問題尚未修正。詳 web/evidence/f03-review.md 及 organization/versions/GEN2_CANDIDATE.md。
+
+## Gen 2 的獨立入口
+後續已新增 src/gen2_workflow.py 與 gen2_analysis.py，方法及 24 項程式檢查完成，完整案件尚待重跑。本文件原命令仍指向保留的 Gen 1；不要把兩個 runner 混用。Gen 2 的操作與已知限制見 GEN2_IMPLEMENTATION.md。
