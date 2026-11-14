@@ -2,7 +2,7 @@ name: Deploy The Evolving Firm
 on:
   push:
     branches: [main]
-    paths: ['web/**', 'scripts/**', '.github/workflows/pages.yml']
+    paths: ['web/**', 'scripts/**', 'src/**', 'tests/**', 'organization/roles/**', 'cases/active/**', '.github/workflows/pages.yml']
   workflow_dispatch:
 permissions:
   contents: read
@@ -28,10 +28,12 @@ jobs:
           node --check web/serve.mjs
           node --check web/src/case.js
           node --check web/src/cases.js
+          node --check web/src/workflow.js
       - name: Check synthetic evidence
         run: |
           python3 scripts/check_f03.py
           python3 scripts/check_versions.py
+          python3 -m unittest discover -s tests -v
       - name: Prepare static website
         run: |
           mkdir -p _site

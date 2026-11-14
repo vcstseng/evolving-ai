@@ -1,4 +1,5 @@
 import { renderCase } from './case.js';
+import { attachWorkflow } from './workflow.js';
 import { renderCases } from './cases.js';
 const $=s=>document.querySelector(s);
 let lang=new URLSearchParams(location.search).get('lang')==='en'?'en':'zh';
@@ -17,7 +18,7 @@ const stages=[
 ['驗證重用','Test reuse','用舊案件檢查有沒有退步，再測改變後的問題與未見案件，分開觀察適應、泛化與能力保留。','Recheck earlier cases for regressions, then test changed problems and unseen cases to distinguish adaptation, generalization and retention.','舊案回測 · 未見案例','Regression · Unseen cases']];
 const panels={
 case:()=>[t('案件預覽','Case preview'),t('當產品線虧損，退出就是答案嗎？','When a product line loses money, should it be discontinued?'),t('示意情境：假設財務分析指出產品線虧損，但其他產品依賴共同零件與產能。團隊需要釐清，局部改善是否會增加整體成本。','Illustrative scenario: suppose financial analysis flags a loss-making product line, but other products share components and capacity. The team must examine whether a local improvement raises total costs.'),t('這是首頁閱讀路徑示意，尚未執行研究。案件總覽與證據詳情會在後續建立。','This illustrates the reading journey only. No study has been run; case and evidence pages come later.')],
-organization:()=>[t('組織預覽','Organization preview'),t('三層責任，按案組隊','Three responsibility layers, assembled per case'),t('專業執行完成分析；案件整合負責派工、矛盾與交付；能力發展診斷缺口，判斷該修方法、補工具、招募既有角色，或建立並測試新角色。候選經資格測試與案件試用後，才決定保留、合併或退役。證據與評估提供橫向支援，人類保留真實授權。','Specialists analyze; case integration assigns work and resolves conflicts; capability development diagnoses gaps and chooses method changes, tools, recruitment or new roles. Candidates need qualification tests and case trials before retention, merging or retirement. Evidence and evaluation support all layers; humans retain actual authority.'),t('沿用原框架的 16 種專業角色規格；不代表本專案已部署 16 個自主 Agent。','Builds on 16 existing role specifications; this project has not deployed 16 autonomous agents.')],
+organization:()=>[t('組織預覽','Organization preview'),t('三層責任，按案組隊','Three responsibility layers, assembled per case'),t('專業執行完成分析；案件整合負責派工、矛盾與交付；能力發展診斷缺口，判斷該修方法、補工具、招募既有角色，或建立並測試新角色。候選經資格測試與案件試用後，才決定保留、合併或退役。證據與評估提供橫向支援，人類保留真實授權。','Specialists analyze; case integration assigns work and resolves conflicts; capability development diagnoses gaps and chooses method changes, tools, recruitment or new roles. Candidates need qualification tests and case trials before retention, merging or retirement. Evidence and evaluation support all layers; humans retain actual authority.'),t('以原框架 16 種角色為參考，本輪選 A01／A02／A06／A08，另設能力發展責任。已跑通本機半自動交接，尚未部署獨立多 Agent。','References the original 16 roles. This pilot selects A01/A02/A06/A08 plus capability development, with local semi-automated handoffs; independent agents have not been deployed.')],
 growth:()=>[t('改進紀錄預覽','Improvement record preview'),t('版本是血脈，不是能力排名','Versions are lineages, not rankings'),t('紀錄問題與組織的各自版本、修改理由、成本與審查分歧。保留舊版本，在不同情境重測，再決定保留、合併或退役；正式選用規則仍待研究。','Track problem and organization versions separately, with reasons, costs and review disagreements. Retest earlier versions in different contexts before retention, merging or retirement. Version-selection policies remain a research question.'),t('目前只整理歷史合成案例，尚無經外部審查的改進或新能力。此區為紀錄方式預覽。','Only a historical synthetic case has been curated. There are no externally reviewed improvements or newly validated capabilities. This previews the record format.')]
 };
 function render(){
@@ -30,7 +31,7 @@ if(new URLSearchParams(location.search).get('view')==='cases'){
 if(new URLSearchParams(location.search).get('view')==='case'&&new URLSearchParams(location.search).get('case')==='f03'){
  document.documentElement.lang=lang==='zh'?'zh-Hant':'en';
  document.title=lang==='zh'?'F03 製造成本案件｜The Evolving Firm':'F03 Manufacturing cost | The Evolving Firm';
- $('#app').innerHTML=renderCase(lang);return;
+ $('#app').innerHTML=renderCase(lang);attachWorkflow(lang);return;
 }
 
 document.documentElement.lang=lang==='zh'?'zh-Hant':'en';document.title=t('The Evolving Firm｜AI 組織能力發展研究','The Evolving Firm | Research on organizational capabilities');

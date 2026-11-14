@@ -1,0 +1,11 @@
+{
+  "id": "f03-local-pilot",
+  "kind": "synthetic",
+  "brief": "兩項產品實際成本高於基準，哪些差異應優先調查？如何在品質、安全及交期限制內提出下一步方案？",
+  "source": "web/evidence/f03/v1/f03-costs.csv",
+  "frozen_proposal": "web/evidence/f03/v1/proposal.md",
+  "max_submissions": 12,
+  "review_status": "awaiting_claude",
+  "authorization": "Only the existing public synthetic F03 evidence; no enterprise writes or external model transmission.",
+  "context": "Historical answers are already known. This run tests execution and handoff, not unseen generalization. Outputs are a separate working draft; frozen v1 remains unchanged."
+}

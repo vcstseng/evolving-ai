@@ -1,0 +1,68 @@
+{
+  "schema": 1,
+  "run_id": "f03-20261115-01",
+  "case_id": "f03-local-pilot",
+  "kind": "synthetic",
+  "created": "2026-11-14T17:14:20.512231+00:00",
+  "status": "handoffs_complete_awaiting_external_review",
+  "external_review": "pending",
+  "independent_agents": false,
+  "unseen_test": false,
+  "business_outcome": "not_measured",
+  "mode": "Shared-context model-assisted handoffs plus deterministic Python tools; no autonomous LLM runner.",
+  "completed": [
+    {
+      "task": "scope",
+      "role": "A01",
+      "executor": "model_assisted",
+      "sha256": "e4a4e5c9e144e7ee630c1af36deacd4e2f7b67d96d89fbbb4818e21af16f2604"
+    },
+    {
+      "task": "evidence",
+      "role": "A02",
+      "executor": "deterministic",
+      "sha256": "6ac2b5f9017485c7dd6df3cbd0e14720fe9fe94228942e580e5fb17c7e7b16e7"
+    },
+    {
+      "task": "finance",
+      "role": "A06",
+      "executor": "deterministic",
+      "sha256": "2417bb7838ece28221e61f0c222ce77eb378212ef2df8156361ed3d34e432cd7"
+    },
+    {
+      "task": "operations",
+      "role": "A08",
+      "executor": "model_assisted",
+      "sha256": "9a9d18479731db9f5dafdd4885da56eeb20697b673c1cf8860e9f90d64a75de0"
+    },
+    {
+      "task": "proposal",
+      "role": "A01",
+      "executor": "model_assisted",
+      "sha256": "dc6ffe5c84a210a80eb5cff61bfa468d01a03144247beb41e3febfca46c6db34"
+    },
+    {
+      "task": "diagnosis",
+      "role": "CD",
+      "executor": "model_assisted",
+      "sha256": "4798981410892619eae7a0e2654df7c9cb56af01a593910fbce1e0c0f9d3ae8d"
+    }
+  ],
+  "objective_checks": {
+    "baseline": "166000.0",
+    "actual": "225300.0",
+    "variance": "59300.0"
+  },
+  "adjustment": "request_evidence",
+  "gap_categories": [
+    "evidence"
+  ],
+  "next_action_status": "pending",
+  "capability_status": "no_new_capability",
+  "submissions": 6,
+  "submission_limit": 12,
+  "model_tokens": null,
+  "model_cost": null,
+  "cost_note": "Model usage for shared-chat tasks is not metered; no zero-cost claim.",
+  "scope_note": "Workflow execution only; schema acceptance is not proposal-quality acceptance. Frozen v1 unchanged."
+}

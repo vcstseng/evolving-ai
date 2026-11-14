@@ -6,7 +6,7 @@ AI 組織能力發展研究。工作名稱：Evolving AI Consulting Firm。
 
 ## 目前進度
 
-Layer 1 中英文首頁原型已完成，延續 Startup Radar／Capability Store 的視覺風格。Layer 2 已加入 F03 歷史合成案例整理，含方案與 Claude 驗證交付材料；尚未執行新的演化研究，沒有自主 Agent 執行器或實驗結果。
+Layer 1 中英文首頁原型已完成，延續 Startup Radar／Capability Store 的視覺風格。Layer 2 已加入 F03 歷史合成案例整理，含方案與 Claude 驗證交付材料；已加入本機半自動案件交接器並完成一次合成試行；尚無自主 LLM 調度、獨立多 Agent、能力演化或企業成效結果。
 
 - 案件列表可依狀態篩選並進入 F03 詳情；組織與能力、改進紀錄仍為預覽對話框。
 - 五階段互動：提出問題 → 提出方案 → 外部審查 → 診斷與調整 → 驗證重用。
@@ -41,7 +41,7 @@ node --check web/serve.mjs
 ## 研究設計
 
 - 三層責任：專業執行、案件整合、能力發展；證據與評估提供橫向支援。
-- 延用既有 16 種角色規格作為專業底座；本 repo 尚未匯入或部署這些角色。
+- 延用既有 16 種角色規格作為專業底座；本輪改編 A01/A02/A06/A08 的案件契約，另設 CD 能力發展責任；未部署全部角色或獨立多 Agent。
 - Junior／Senior／Director 等職級為早期例子，不是固定需求。
 - 新增 Agent 是選項之一，先判斷是否缺資料、方法、工具或分工。
 - 第一版定位為可行性觀察；單 Agent、固定組織與可調整組織的比較仍待定義與執行。
@@ -87,3 +87,8 @@ GitHub Pages 透過 `.github/workflows/pages.yml` 發布，main 的 web/ 或 wor
 `web/evidence/f03/v1/` 固定既有題目、限制、方案文件與選用資料，文字統一 LF；`manifest.json` 記錄來源提交與 SHA-256。v1 是文件快照，不是 Agent 世代。後續修改另存新版本，保留來源審查、理由與分歧，不覆寫 v1。執行 `python scripts/check_versions.py` 核對保留內容完整性。
 
 案件閱讀順序為問題 → 方案 → 審查與修改 → 版本與組織 → 歷史過程。內部模擬自查不算 Claude 審查，未用來改寫固定方案。
+
+## 本機案件處理已可執行
+詳 [本機流程](docs/LOCAL_WORKFLOW.md)。`python -X utf8 -m src.workflow` 提供 start／packet／submit／tool／status／export，按依賴接收交付並留存來源與雜湊。三層責任已在 F03 合成試行完成六步交接，缺口判斷為補證據，未新增角色或能力。
+
+程式只做派工、計算、結構檢查與紀錄，模型工作由同一對話協助交付；結構檢查通過不代表方案品質通過。Claude 審查維持待執行。原始 run 不上傳，網頁只展示白名單摘要；固定方案 v1 不變。模型 token 與成本未量測。

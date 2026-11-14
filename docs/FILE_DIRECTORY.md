@@ -1,6 +1,6 @@
 # 檔案目錄
 
-目前可執行內容為 web/ 的 Layer 1 首頁與 Layer 2 案件頁；其他區域為文件、模板或預留目錄。
+目前可執行內容包括 web/ 的首頁與案件頁，以及 src/ 的本機半自動案件交接器。其他區域為契約、設定、文件、模板或預留目錄。
 .git/ 為本機版本資料，不列入以下目錄。
 
 ```text
@@ -17,6 +17,7 @@ evolving-ai/
     validated/
   cases/
     active/
+      f03-pilot.json
     completed/
     templates/
       CASE_BRIEF.md
@@ -25,6 +26,7 @@ evolving-ai/
       README.md
     public/
   docs/
+    LOCAL_WORKFLOW.md
     CONCEPT.md
     FILE_DIRECTORY.md
     PROGRESS.md
@@ -34,6 +36,7 @@ evolving-ai/
     results/
   organization/
     roles/
+      pilot.json
     versions/
   presentation/
     DEMO_STORY.md
@@ -48,12 +51,17 @@ evolving-ai/
     check_f03.py
     check_versions.py
   src/
+    __init__.py
+    workflow.py
+    cost_analysis.py
   tests/
+    test_workflow.py
   web/
     index.html
     package.json
     serve.mjs
     evidence/
+      f03-workflow.json
       f03-costs.csv
       f03-summary.md
       f03-provenance.json
@@ -67,6 +75,7 @@ evolving-ai/
     src/
       case.js
       cases.js
+      workflow.js
       app.js
       styles.css
 ```
@@ -75,11 +84,11 @@ evolving-ai/
 
 - web/：中英文靜態首頁、樣式與僅限本機的預覽伺服器。
 - organization/、capabilities/：預留角色、組織版本及候選／驗證／退役能力，尚無 Agent 實作。
-- cases/、reviews/：案件與審查模板；active/、completed/ 尚無研究案件。
+- cases/、reviews/：案件與審查模板；active/ 有 F03 本機合成試行設定；completed/ 尚無完成研究案件。
 - experiments/：可行性試行草案；results/ 尚無結果。
 - data/private/、runs/：不提交內容，僅保留說明。
 - presentation/：展示草案與首頁截圖。
-- src/、tests/：預留研究執行器與測試；網站程式位於 web/src/。
+- src/、tests/：本機半自動交接器、成本計算與流程測試；網站程式位於 web/src/。
 - .gitattributes：文字 LF 與 PNG binary 規則。
 
 GitHub 目前為 public；Pages 發布雙語首頁、案件頁與合成證據。
@@ -107,3 +116,17 @@ GitHub 目前為 public；Pages 發布雙語首頁、案件頁與合成證據。
 - presentation/case-register-desktop.png：案件列表桌面驗證截圖。
 
 UI／UX 整理沿用 web/src/app.js、cases.js、case.js 與 styles.css；沒有新增功能模組或資料目錄。web/evidence/f03/v1/ 的固定文件維持原樣。
+
+## 本機流程新增檔案
+- src/workflow.py：本機交接、依賴、提交上限、缺口分類與白名單摘要出口。
+- src/cost_analysis.py：輸入驗證與 Decimal 固定順序差異計算；不作因果推論。
+- src/__init__.py：Python 套件入口。
+- organization/roles/pilot.json：A01/A02/A06/A08/CD 的本輪契約。
+- cases/active/f03-pilot.json：合成試行範圍與交付上限。
+- tests/test_workflow.py：執行流程及錯誤情境測試。
+- docs/LOCAL_WORKFLOW.md：操作方式、實際完成與未完成範圍。
+- web/evidence/f03-workflow.json：公開白名單執行摘要，不含原始交付與事件。
+- web/src/workflow.js：在既有案件頁顯示本輪摘要。
+- runs/f03-20261115-01/：只在本機，Git 忽略，含交付與事件；不納入公開目錄樹或 Pages artifact。
+
+- presentation/local-workflow-desktop.png：本輪執行摘要桌面截圖。
