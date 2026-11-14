@@ -1,0 +1,69 @@
+{
+  "schema": 2,
+  "generation": "gen2",
+  "run_id": "f03-gen2-20261115-01",
+  "case_id": "f03-gen2-pilot",
+  "kind": "synthetic",
+  "created": "2026-11-14T18:58:48.821811+00:00",
+  "status": "handoffs_complete_awaiting_external_review",
+  "external_review": "pending",
+  "independent_agents": false,
+  "unseen_test": false,
+  "business_outcome": "not_measured",
+  "mode": "Shared-context model-assisted handoffs plus deterministic Python tools; no autonomous LLM runner.",
+  "completed": [
+    {
+      "task": "scope",
+      "role": "A01",
+      "executor": "model_assisted",
+      "sha256": "dc4366f5bb04a1760b9355e1ae587efb5d9b5fd97e9aeddecdf8187a0d9c243b"
+    },
+    {
+      "task": "evidence",
+      "role": "A02",
+      "executor": "deterministic",
+      "sha256": "b8d7435d553dff02f6ed20df729810711d09658ed9486b038558525c74e6f815"
+    },
+    {
+      "task": "finance",
+      "role": "A06",
+      "executor": "deterministic",
+      "sha256": "ca590095bd28697b8ae7559d2cd24609b299568058b8896f87befa8067c9919a"
+    },
+    {
+      "task": "operations",
+      "role": "A08",
+      "executor": "model_assisted",
+      "sha256": "461f2eecb38a82bbca7b392c8febaee44809274e36265b9e8dc5e859b49608b8"
+    },
+    {
+      "task": "proposal",
+      "role": "A01",
+      "executor": "model_assisted",
+      "sha256": "d6e18caebb861715a57dcdd8af9bbe391383b631dad1b1222ce680d4ff7c63e7"
+    },
+    {
+      "task": "diagnosis",
+      "role": "CD",
+      "executor": "model_assisted",
+      "sha256": "f66d4eecb00208417147356c714f79c98883d21c62fa33e4ee4ecb7c06b0eccb"
+    }
+  ],
+  "objective_checks": {
+    "baseline": "166000",
+    "actual": "225300",
+    "variance": "59300"
+  },
+  "adjustment": "request_evidence",
+  "gap_categories": [
+    "evidence"
+  ],
+  "next_action_status": "pending",
+  "capability_status": "no_new_capability",
+  "submissions": 6,
+  "submission_limit": 12,
+  "model_tokens": null,
+  "model_cost": null,
+  "cost_note": "Model usage for shared-chat tasks is not metered; no zero-cost claim.",
+  "scope_note": "Workflow execution only; schema acceptance is not proposal-quality acceptance. Frozen v1 unchanged."
+}

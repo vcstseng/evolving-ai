@@ -55,6 +55,8 @@ evolving-ai/
   scripts/
     check_f03.py
     check_versions.py
+    check_f03_v2.py
+    package_f03_v2.py
   src/
     __init__.py
     workflow.py
@@ -73,6 +75,7 @@ evolving-ai/
       f03-review.md
       gen2-checks.json
       f03-gen2-calculation.json
+      f03-gen2-workflow.json
       f03-costs.csv
       f03-summary.md
       f03-provenance.json
@@ -88,6 +91,7 @@ evolving-ai/
       cases.js
       workflow.js
       evolution.js
+      proposal-v2.js
       app.js
       styles.css
 ```
@@ -95,7 +99,7 @@ evolving-ai/
 ## 主要區域
 
 - web/：中英文靜態首頁、樣式與僅限本機的預覽伺服器。
-- organization/、capabilities/：預留角色、組織版本及候選／驗證／退役能力，尚無 Agent 實作。
+- organization/、capabilities/：已加入角色契約與世代紀錄（非獨立 Agent 部署）；候選／驗證／退役能力目錄仍預留。
 - cases/、reviews/：案件與審查模板；active/ 有 F03 本機合成試行設定；completed/ 尚無完成研究案件。
 - experiments/：可行性試行草案；results/ 尚無結果。
 - data/private/、runs/：不提交內容，僅保留說明。
@@ -159,3 +163,13 @@ UI／UX 整理沿用 web/src/app.js、cases.js、case.js 與 styles.css；沒有
 - web/evidence/f03-gen2-calculation.json：已知 F03 的工具回歸輸出，不是完整案件重跑。
 
 - presentation/gen2-code-checks-desktop.png：程式檢查與待案件重跑比較的桌面截圖。
+
+## F03 v2 與重跑新增
+- scripts/package_f03_v2.py：從已完成合成 run 整理公開最終交付；不複製原始角色 JSON、事件或聊天，不覆寫既存包。
+- scripts/check_f03_v2.py：固定 manifest／檔案完整性、同一輸入與計算一致性檢查。
+- web/evidence/f03/v2/：brief.md、proposal.md、review-brief.md、comparison.md、f03-costs.csv、calculation.json、publication.json、manifest.json。
+- web/evidence/f03-gen2-workflow.json：本輪六步交付公開白名單摘要。
+- web/src/proposal-v2.js：v1／v2 切換與整理版 v2 內容呈現。
+- runs/f03-gen2-20261115-01/：原始執行與交付，只在本機、Git 忽略。
+
+- presentation/f03-v2-desktop.png：方案 v2、版本切換及新成本拆分的桌面截圖。

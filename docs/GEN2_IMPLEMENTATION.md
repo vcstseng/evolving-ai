@@ -54,3 +54,6 @@ proposal 的 packet 提供 numeric_claims_template（totals、fixed_effects、by
 web/evidence/gen2-checks.json 是程式測試結果摘要；f03-gen2-calculation.json 是已知 F03 的工具回歸輸出。都不含原始模型交付。
 
 尚未完成：實際角色解題重跑與方案 v2、Claude 複審、跨案／基準比較、案件層級預算、token 計量、公開可核對的整合交付包。12 次仍只是單一 run 的提交上限，接自動模型前需另外限制實驗總預算。
+
+## 後續：同案重跑已完成
+本文件前述待重跑狀態是方法實作完成時的紀錄。其後已完成 f03-gen2-20261115-01 六步半自動交付並保存 v2。六次提交、無拒收，CD 仍選補證據，沒有使用 no_gap。v2 的有界調查是未批准提案，沒有現場執行。Claude 複審與未見重用仍待進行。詳 web/evidence/f03/v2/ 及 docs/PROGRESS.md 最新紀錄。

@@ -30,10 +30,12 @@ jobs:
           node --check web/src/cases.js
           node --check web/src/workflow.js
           node --check web/src/evolution.js
+          node --check web/src/proposal-v2.js
       - name: Check synthetic evidence
         run: |
           python3 scripts/check_f03.py
           python3 scripts/check_versions.py
+          python3 scripts/check_f03_v2.py
           python3 -m unittest discover -s tests -v
       - name: Prepare static website
         run: |

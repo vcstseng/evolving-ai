@@ -1,0 +1,214 @@
+{
+  "schema": 1,
+  "generation": "gen2",
+  "proposal_version": "v2",
+  "run_id": "f03-gen2-20261115-01",
+  "source_commit": "a2085d3",
+  "date": "2026-11-15",
+  "review_status": "awaiting_claude_rereview",
+  "mode": "Shared-context model-assisted handoffs plus deterministic tools; not independent agents.",
+  "completed_handoffs": 6,
+  "submissions": 6,
+  "rejections": 0,
+  "adjustment": "request_evidence",
+  "new_capability": false,
+  "model_tokens": null,
+  "model_cost": null,
+  "unseen_test": false,
+  "business_outcome": "not_measured",
+  "publication_scope": "Curated final deliverable and checkable synthetic calculation, not raw role handoffs or chat.",
+  "recommendation": "先核對期間與資料定義，再把產量／產品組合影響與其他差異分開。優先對驅動馬達做工時只讀調查，其次核對工資率；材料有利差異以品質及口徑核對為主。未證實可控制原因前，不進行改善試點。",
+  "alternatives": [
+    {
+      "option": "只維持監測",
+      "tradeoff": "投入較低，但未能回答較大的非產量差異；若資料無法取得或變動經證實合理，可選此路徑並保留限制。"
+    },
+    {
+      "option": "限定範圍的只讀調查",
+      "tradeoff": "建議採用；限單一產品及一組可比工單，先釐清口徑、必要工時與可能損失。"
+    },
+    {
+      "option": "直接現場試點或全面改造",
+      "tradeoff": "缺根因、授權、預算與品質安全門檻，不採用；不是因工時歸因大就有理由推行。"
+    }
+  ],
+  "limitations": [
+    "合成資料且答案已知；不能當成未見案件或企業成效。",
+    "彈性基準假設提供的都是可按產量縮放的每單位成本，沒有真實固定成本拆分或產能資訊。",
+    "未提供期間、良品單位及工時定義與營運紀錄；全部商業解讀均以可比性待確認為前提。",
+    "全順序平均是分配交互項的會計方法，不是因果，也不表示歸因金額可全部節省。",
+    "同一模型對話協助履行角色，沒有獨立模型或盲測；模型成本未計量。",
+    "數值綁定工具只支持一致性，不能證明建議與來源真實性。"
+  ],
+  "next_actions": [
+    {
+      "stage": "先確認調查能否啟動",
+      "owner": "人類案件擁有者（待指派）",
+      "scope": "先限驅動馬達及一組可比工單；營運與財務各一位負責人。",
+      "proposed_limit": "建議人類同意啟動後五個工作日設決策點，財務與營運各最多半個工作日。這是待確認的提案，不是已批准預算或已投入工時。",
+      "minimum_evidence": "兩期日期、良品單位與工時定義、可比工單及成本範圍。",
+      "stop": "到決策點仍拿不到最低證據，交付證據不足的受限結論；停止或另行申請延長，不自動擴大調查。"
+    },
+    {
+      "stage": "核對可比性再查工時",
+      "owner": "財務與營運負責人（待指派）",
+      "action": "先檢查期間與工時記錄／分攤；若一致，再比較相同規格與批量下的必要工時和損失工時。",
+      "branch": "若只是合理規格／批量差異，更新基準並監測；若不能證明可控制原因，不試點。"
+    },
+    {
+      "stage": "其次核對工資率與有利材料差異",
+      "owner": "財務與品質負責人（待指派）",
+      "action": "查薪酬範圍、加班、人員組合及品質，避免率差被誤解為應降薪或材料改善已成立。",
+      "branch": "資料不足即記為未知，不將材料有利差異當作其他改善的資金來源。"
+    },
+    {
+      "stage": "僅在原因成立後提出可逆試點",
+      "owner": "人類案件擁有者與品質安全負責人（待指派）",
+      "entry_gate": "可追溯證據支持可控制原因、可比較的量測設計、完整預算及人工授權均具備。",
+      "acceptance": "試點前另外確認改善與品質、安全、交期門檻。門檻未確認不啟動；觸及已確認品質安全界線就停止並回復。",
+      "non_gate": "不以單一歸因佔比取代根因及授權判斷。"
+    }
+  ],
+  "human_decisions": [
+    "是否採用建議的範圍、調查期限與人力上限。",
+    "指派資料、營運、財務及品質安全負責人。",
+    "未來是否批准試點及其成本、量測與停止門檻。"
+  ],
+  "disagreements": [
+    "不採用僅依成本歸因佔比就進入試點的規則，因其不能證明原因可控制；改採證據、可反駁原因與人工授權的關卡。"
+  ],
+  "evidence_gaps": [
+    {
+      "id": "periods",
+      "category": "evidence",
+      "detail": "Valid baseline/actual dates were not supplied in the evidence metadata."
+    },
+    {
+      "id": "units_definition",
+      "category": "evidence",
+      "detail": "No supplied definition for units."
+    },
+    {
+      "id": "hours_per_unit_definition",
+      "category": "evidence",
+      "detail": "No supplied definition for hours_per_unit."
+    },
+    {
+      "id": "operational_records",
+      "category": "evidence",
+      "detail": "No operational evidence reference was supplied; causal claims remain unsupported."
+    }
+  ],
+  "calculation": {
+    "totals": {
+      "baseline": "166000",
+      "actual": "225300",
+      "variance": "59300",
+      "flex_baseline": "188000",
+      "volume_effect": "22000",
+      "non_volume_variance": "37300"
+    },
+    "fixed_order": [
+      "units",
+      "material_price",
+      "material_per_unit",
+      "hourly_rate",
+      "hours_per_unit",
+      "overhead_per_unit"
+    ],
+    "fixed_effects": {
+      "units": "22000",
+      "material_price": "-6000",
+      "material_per_unit": "-2700",
+      "hourly_rate": "4000",
+      "hours_per_unit": "42000",
+      "overhead_per_unit": "0"
+    },
+    "by_product": [
+      {
+        "product": "定位器 Y",
+        "baseline": "56000",
+        "actual": "61200",
+        "flex_baseline": "56000",
+        "volume_effect": "0",
+        "non_volume_variance": "5200",
+        "effects": {
+          "units": "0",
+          "material_price": "0",
+          "material_per_unit": "0",
+          "hourly_rate": "1000",
+          "hours_per_unit": "4200",
+          "overhead_per_unit": "0"
+        }
+      },
+      {
+        "product": "驅動馬達 X",
+        "baseline": "110000",
+        "actual": "164100",
+        "flex_baseline": "132000",
+        "volume_effect": "22000",
+        "non_volume_variance": "32100",
+        "effects": {
+          "units": "22000",
+          "material_price": "-6000",
+          "material_per_unit": "-2700",
+          "hourly_rate": "3000",
+          "hours_per_unit": "37800",
+          "overhead_per_unit": "0"
+        }
+      }
+    ],
+    "sensitivity": {
+      "orders": 720,
+      "effects": {
+        "units": {
+          "min": "20550",
+          "max": "28800",
+          "mean": "24616.666666666667",
+          "mean_fraction": "73850/3"
+        },
+        "material_price": {
+          "min": "-6000",
+          "max": "-4750",
+          "mean": "-5358.333333333333",
+          "mean_fraction": "-16075/3"
+        },
+        "material_per_unit": {
+          "min": "-3000",
+          "max": "-2250",
+          "mean": "-2608.333333333333",
+          "mean_fraction": "-7825/3"
+        },
+        "hourly_rate": {
+          "min": "3500",
+          "max": "6000",
+          "mean": "4700",
+          "mean_fraction": "4700"
+        },
+        "hours_per_unit": {
+          "min": "34000",
+          "max": "42000",
+          "mean": "37950",
+          "mean_fraction": "37950"
+        },
+        "overhead_per_unit": {
+          "min": "0",
+          "max": "0",
+          "mean": "0",
+          "mean_fraction": "0"
+        }
+      },
+      "hours_largest_in_every_order": true,
+      "adverse_drivers_by_mean": [
+        "hours_per_unit",
+        "units",
+        "hourly_rate"
+      ]
+    },
+    "limitations": [
+      "Flexible baseline assumes the supplied per-unit cost model; it does not distinguish true fixed costs.",
+      "Order means are rounded to 12 decimal places; mean_fraction retains the exact rational value.",
+      "Accounting attribution and priority signals do not establish causes, avoidable waste or savings."
+    ]
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "case": "f03",
+  "generation": "gen2",
+  "proposal_version": "v2",
+  "parent": "v1",
+  "run_id": "f03-gen2-20261115-01",
+  "date": "2026-11-15",
+  "source_commit": "a2085d3",
+  "review_status": "awaiting_claude_rereview",
+  "change_reason": "Respond to the user-relayed Claude review of c002556; retain v1.",
+  "files": [
+    {
+      "path": "brief.md",
+      "sha256": "10a174f203f3fcfe09eed6492f5a1086431ff94b315c6e46f6eee614f7066c87"
+    },
+    {
+      "path": "calculation.json",
+      "sha256": "d2f1ae12d3ac95806546f67e49c80a90d10c1f312bfa4f1641f55d403dddc3d1"
+    },
+    {
+      "path": "comparison.md",
+      "sha256": "44f691ee8f4da22b36661955d7ddc9a099a2fcc5e4cc07fe9bc14bf5306b2d36"
+    },
+    {
+      "path": "f03-costs.csv",
+      "sha256": "99a35ba5f895e766505000d6f69c739134e2fc06e06729cf6172377df3c34d42"
+    },
+    {
+      "path": "proposal.md",
+      "sha256": "e57b211949e6763203b9a48add4e2c98538e14762fc93b15faa961813a0d2a95"
+    },
+    {
+      "path": "publication.json",
+      "sha256": "5f602757d566e361951ef6af86fbcc3fc5815418321c871469b2284b4e501eb2"
+    },
+    {
+      "path": "review-brief.md",
+      "sha256": "2aae976cc15f6373452fbafdba64a14fa73ad0c399fa03a7dca00fe82a4bc3d2"
+    }
+  ]
+}
