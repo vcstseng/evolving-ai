@@ -38,6 +38,8 @@ evolving-ai/
     roles/
       pilot.json
     versions/
+      GEN1.md
+      GEN2_CANDIDATE.md
   presentation/
     DEMO_STORY.md
     layer-one-desktop.png
@@ -62,6 +64,7 @@ evolving-ai/
     serve.mjs
     evidence/
       f03-workflow.json
+      f03-review.md
       f03-costs.csv
       f03-summary.md
       f03-provenance.json
@@ -76,6 +79,7 @@ evolving-ai/
       case.js
       cases.js
       workflow.js
+      evolution.js
       app.js
       styles.css
 ```
@@ -101,7 +105,7 @@ GitHub 目前為 public；Pages 發布雙語首頁、案件頁與合成證據。
 
 - presentation/version-matrix-desktop.png：雙版本區塊的本機視覺檢查截圖（虛構矩陣）。
 
-- web/src/case.js：F03 歷史合成案件頁，Claude 待審查。
+- web/src/case.js：F03 歷史合成案件頁，已收到轉貼審查，Gen 2 候選待實作。
 - web/evidence/：可公開的合成 CSV、方案核對稿、來源雜湊；非原始執行 bundle。
 - scripts/check_f03.py：獨立算術與發布資料完整性檢查。
 
@@ -130,3 +134,9 @@ UI／UX 整理沿用 web/src/app.js、cases.js、case.js 與 styles.css；沒有
 - runs/f03-20261115-01/：只在本機，Git 忽略，含交付與事件；不納入公開目錄樹或 Pages artifact。
 
 - presentation/local-workflow-desktop.png：本輪執行摘要桌面截圖。
+
+- web/src/evolution.js：世代導覽、轉貼審查摘要、候選方法與待重跑比較；不產生實驗結果。
+- web/evidence/f03-review.md：審查來源、範圍及發現摘要，非逐字全文。
+- organization/versions/GEN1.md、GEN2_CANDIDATE.md：受審查基線與未實作候選的區分。
+
+- presentation/gen2-candidate-desktop.png：候選方法、世代／方案區分的桌面檢查截圖。

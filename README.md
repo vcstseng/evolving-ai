@@ -8,7 +8,7 @@ AI 組織能力發展研究。工作名稱：Evolving AI Consulting Firm。
 
 Layer 1 中英文首頁原型已完成，延續 Startup Radar／Capability Store 的視覺風格。Layer 2 已加入 F03 歷史合成案例整理，含方案與 Claude 驗證交付材料；已加入本機半自動案件交接器並完成一次合成試行；尚無自主 LLM 調度、獨立多 Agent、能力演化或企業成效結果。
 
-- 案件列表可依狀態篩選並進入 F03 詳情；組織與能力、改進紀錄仍為預覽對話框。
+- 案件列表可依狀態篩選並進入 F03 詳情；組織仍有預覽說明，改進入口已連至 Gen 2 候選計畫。
 - 五階段互動：提出問題 → 提出方案 → 外部審查 → 診斷與調整 → 驗證重用。
 - 示意案例與研究狀態明確標示；三種證據分開說明。
 - 問題與組織雙版本、可點選的交叉測試矩陣；矩陣結果完全虛構，非研究成果。
@@ -75,14 +75,14 @@ GitHub Pages 透過 `.github/workflows/pages.yml` 發布，main 的 web/ 或 wor
 首批 10 題仍為後續範圍規劃，尚未選定。第一輪不要求建立新 Agent，不必同時完成三組組織比較；自動出題、無限制擴編與版本路由留待後續。首頁雙版本矩陣僅展示測試概念。
 
 ## Layer 2｜F03 案件室
-[公開案件頁](https://vcstseng.github.io/evolving-ai/?lang=zh&view=case&case=f03)。歷史合成資料、共享上下文角色演練與新演化研究分開標示。最終方案待 Claude 實際回覆，未宣稱通過。先提供原始問題、限制、交付要求與方案給 Claude 審查；CSV 僅為本案核對數字時的選用佐證。
+[公開案件頁](https://vcstseng.github.io/evolving-ai/?lang=zh&view=case&case=f03)。歷史合成資料、共享上下文角色演練與新演化研究分開標示。已收到使用者轉貼的 Claude 審查，指出需修正；未宣稱通過。先提供原始問題、限制、交付要求與方案給 Claude 審查；CSV 僅為本案核對數字時的選用佐證。
 
 執行 `python scripts/check_f03.py` 可獨立重算總額、六項順序差異並核對 CSV 雜湊；這只驗證算術一致性。
 
 交付依問題定義：方案本身可為完整成果，不要求每題都有 CSV、程式或附件。案件頁以方案 → Claude 審查 → 後續修改為主線。發布狀態以 GitHub Pages 最新部署為準。
 
 ## 案件列表與保留版本
-[案件列表](https://vcstseng.github.io/evolving-ai/?lang=zh&view=cases) 依待解題、待審查、修改中與待重用測試篩選。目前僅 F03 歷史合成案例，Claude 審查待執行，沒有填入未執行的假案件。
+[案件列表](https://vcstseng.github.io/evolving-ai/?lang=zh&view=cases) 依待解題、待審查、修改中與待重用測試篩選。目前僅 F03 歷史合成案例，Claude 審查已收到，Gen 2 候選待實作，沒有填入未執行的假案件。
 
 `web/evidence/f03/v1/` 固定既有題目、限制、方案文件與選用資料，文字統一 LF；`manifest.json` 記錄來源提交與 SHA-256。v1 是文件快照，不是 Agent 世代。後續修改另存新版本，保留來源審查、理由與分歧，不覆寫 v1。執行 `python scripts/check_versions.py` 核對保留內容完整性。
 
@@ -91,4 +91,7 @@ GitHub Pages 透過 `.github/workflows/pages.yml` 發布，main 的 web/ 或 wor
 ## 本機案件處理已可執行
 詳 [本機流程](docs/LOCAL_WORKFLOW.md)。`python -X utf8 -m src.workflow` 提供 start／packet／submit／tool／status／export，按依賴接收交付並留存來源與雜湊。三層責任已在 F03 合成試行完成六步交接，缺口判斷為補證據，未新增角色或能力。
 
-程式只做派工、計算、結構檢查與紀錄，模型工作由同一對話協助交付；結構檢查通過不代表方案品質通過。Claude 審查維持待執行。原始 run 不上傳，網頁只展示白名單摘要；固定方案 v1 不變。模型 token 與成本未量測。
+程式只做派工、計算、結構檢查與紀錄，模型工作由同一對話協助交付；結構檢查通過不代表方案品質通過。目前已收到使用者轉貼的 Claude 審查；原 run 的 pending 保留為審查前快照。原始 run 不上傳，網頁只展示白名單摘要；固定方案 v1 不變。模型 token 與成本未量測。
+
+## Gen 1 → 審查 → Gen 2 候選
+受審查的 c002556 提交回溯命名為 Gen 1；Gen 2 是方法修訂候選，不是已執行或已驗證的世代。案件頁提供審查範圍、四項候選改動與空白結果比較（全部明示未測），不改寫方案 v1 或審查前 run 快照。詳 [審查摘要](web/evidence/f03-review.md)、[候選計畫](organization/versions/GEN2_CANDIDATE.md)。
