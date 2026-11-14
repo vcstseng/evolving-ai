@@ -105,3 +105,5 @@ GitHub 目前為 public；Pages 發布雙語首頁、案件頁與合成證據。
 - scripts/check_versions.py：核對固定 manifest 與檔案完整性。
 
 - presentation/case-register-desktop.png：案件列表桌面驗證截圖。
+
+UI／UX 整理沿用 web/src/app.js、cases.js、case.js 與 styles.css；沒有新增功能模組或資料目錄。web/evidence/f03/v1/ 的固定文件維持原樣。
