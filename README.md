@@ -6,9 +6,9 @@ AI 組織能力發展研究。工作名稱：Evolving AI Consulting Firm。
 
 ## 目前進度
 
-Layer 1 中英文首頁原型已完成，延續 Startup Radar／Capability Store 的視覺風格。目前為靜態 UI 原型，尚未選定或執行研究案件，沒有自主 Agent 執行器或實驗結果。
+Layer 1 中英文首頁原型已完成，延續 Startup Radar／Capability Store 的視覺風格。Layer 2 已加入 F03 歷史合成案例整理，含方案與 Claude 驗證交付材料；尚未執行新的演化研究，沒有自主 Agent 執行器或實驗結果。
 
-- 案件、組織與能力、改進紀錄三個入口，使用預覽對話框。
+- 案件入口連至 F03 詳情；組織與能力、改進紀錄仍為預覽對話框。
 - 五階段互動：提出問題 → 提出方案 → 外部審查 → 診斷與調整 → 驗證重用。
 - 示意案例與研究狀態明確標示；三種證據分開說明。
 - 問題與組織雙版本、可點選的交叉測試矩陣；矩陣結果完全虛構，非研究成果。
@@ -67,9 +67,16 @@ GitHub：公開 repo https://github.com/vcstseng/evolving-ai 。
 
 網站：https://vcstseng.github.io/evolving-ai/ （英文：?lang=en）。
 
-GitHub Pages 透過 `.github/workflows/pages.yml` 發布，main 的 web/ 或 workflow 更新觸發部署。只上傳 index.html、app.js 與 styles.css；本機伺服器、研究文件與資料不納入網站 artifact。
+GitHub Pages 透過 `.github/workflows/pages.yml` 發布，main 的 web/ 或 workflow 更新觸發部署。只發布 index.html、src/ 與經整理的 evidence/ 合成證據；本機伺服器、其他研究文件與私有資料不納入網站 artifact。
 
 ## 第一輪範圍收斂
 先選一種工作與數個案件，追蹤一次可識別的能力改變，檢查它在未見案件是否可重用，以及舊案是否退步。普通 Agent＋相同工具＋記憶與反思為必要探索性對照，保持相同可用資料、模型、工具權限與總預算。小型試行不支持統計優越性結論。
 
 首批 10 題仍為後續範圍規劃，尚未選定。第一輪不要求建立新 Agent，不必同時完成三組組織比較；自動出題、無限制擴編與版本路由留待後續。首頁雙版本矩陣僅展示測試概念。
+
+## Layer 2｜F03 案件室
+[公開案件頁](https://vcstseng.github.io/evolving-ai/?lang=zh&view=case&case=f03)。歷史合成資料、共享上下文角色演練與新演化研究分開標示。最終方案待 Claude 實際回覆，未宣稱通過。先提供原始問題、限制、交付要求與方案給 Claude 審查；CSV 僅為本案核對數字時的選用佐證。
+
+執行 `python scripts/check_f03.py` 可獨立重算總額、六項順序差異並核對 CSV 雜湊；這只驗證算術一致性。
+
+交付依問題定義：方案本身可為完整成果，不要求每題都有 CSV、程式或附件。案件頁以方案 → Claude 審查 → 後續修改為主線。發布狀態以 GitHub Pages 最新部署為準。

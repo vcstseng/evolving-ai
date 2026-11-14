@@ -1,6 +1,6 @@
 # 檔案目錄
 
-目前可執行內容為 web/ 的 Layer 1 首頁；其他區域為文件、模板或預留目錄。
+目前可執行內容為 web/ 的 Layer 1 首頁與 Layer 2 案件頁；其他區域為文件、模板或預留目錄。
 .git/ 為本機版本資料，不列入以下目錄。
 
 ```text
@@ -44,13 +44,20 @@ evolving-ai/
       REVIEW.md
   runs/
     README.md
+  scripts/
+    check_f03.py
   src/
   tests/
   web/
     index.html
     package.json
     serve.mjs
+    evidence/
+      f03-costs.csv
+      f03-summary.md
+      f03-provenance.json
     src/
+      case.js
       app.js
       styles.css
 ```
@@ -66,7 +73,7 @@ evolving-ai/
 - src/、tests/：預留研究執行器與測試；網站程式位於 web/src/。
 - .gitattributes：文字 LF 與 PNG binary 規則。
 
-GitHub 目前為 public；Pages 發布 Layer 1 靜態首頁。
+GitHub 目前為 public；Pages 發布雙語首頁、案件頁與合成證據。
 
 - .github/workflows/pages.yml：main 分支網站更新時檢查語法並部署 Pages。
 
@@ -75,3 +82,11 @@ GitHub 目前為 public；Pages 發布 Layer 1 靜態首頁。
 第一輪範圍以 docs/CONCEPT.md、experiments/protocols/PILOT.md 為準；首頁版本矩陣為展示概念，非執行器功能。
 
 - presentation/version-matrix-desktop.png：雙版本區塊的本機視覺檢查截圖（虛構矩陣）。
+
+- web/src/case.js：F03 歷史合成案件頁，Claude 待審查。
+- web/evidence/：可公開的合成 CSV、方案核對稿、來源雜湊；非原始執行 bundle。
+- scripts/check_f03.py：獨立算術與發布資料完整性檢查。
+
+- presentation/f03-case-desktop.png：案件頁桌面檢查截圖。
+
+方案優先調整：web/src/case.js 呈現方案、Claude 審查與修改；web/evidence/f03-summary.md 是方案與審查說明，CSV 為選用佐證。cases/templates/CASE_BRIEF.md 與 reviews/templates/REVIEW.md 已同步交付與審查規則。Layer 2 隨網站部署一併發布。

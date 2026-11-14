@@ -1,0 +1,21 @@
+{
+  "case": "F03 historical synthetic round2",
+  "source_date": "2026-10-25",
+  "prepared": "2026-11-14",
+  "claude_review": "pending",
+  "csv_sha256": "99a35ba5f895e766505000d6f69c739134e2fc06e06729cf6172377df3c34d42",
+  "documents": [
+    {
+      "name": "F03_CONSULTING_SOLUTION.md",
+      "sha256": "aec264fa678281d9b6efbfcbcb60f739bede31f6a89c3ee5e708259f8027ecfe"
+    },
+    {
+      "name": "F03_SOLUTION_REVIEW.md",
+      "sha256": "751518ab00af69fd5713a9766108084d9ce97f5470ab819fa46bc068e1833f54"
+    },
+    {
+      "name": "ROLE_SKILL_BUILD_PROGRESS.md",
+      "sha256": "0d4c28d2849f7584f145d9a36dcd7a655d42340d3e313fbe3743a314c669679f"
+    }
+  ]
+}

@@ -2,7 +2,7 @@ name: Deploy The Evolving Firm
 on:
   push:
     branches: [main]
-    paths: ['web/**', '.github/workflows/pages.yml']
+    paths: ['web/**', 'scripts/check_f03.py', '.github/workflows/pages.yml']
   workflow_dispatch:
 permissions:
   contents: read
@@ -26,11 +26,14 @@ jobs:
         run: |
           node --check web/src/app.js
           node --check web/serve.mjs
+          node --check web/src/case.js
+      - name: Check synthetic evidence
+        run: python3 scripts/check_f03.py
       - name: Prepare static website
         run: |
-          mkdir -p _site/src
+          mkdir -p _site
           cp web/index.html _site/index.html
-          cp web/src/app.js web/src/styles.css _site/src/
+          cp -R web/src web/evidence _site/
           touch _site/.nojekyll
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
