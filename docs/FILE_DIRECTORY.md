@@ -69,3 +69,9 @@ evolving-ai/
 GitHub 目前為 public；Pages 發布 Layer 1 靜態首頁。
 
 - .github/workflows/pages.yml：main 分支網站更新時檢查語法並部署 Pages。
+
+雙版本 UI：web/src/app.js 內 matrix 為標記清楚的虛構示意資料；data-matrix 開啟證據結構預覽，不代表已執行測試。版本設計詳 docs/CONCEPT.md。
+
+第一輪範圍以 docs/CONCEPT.md、experiments/protocols/PILOT.md 為準；首頁版本矩陣為展示概念，非執行器功能。
+
+- presentation/version-matrix-desktop.png：雙版本區塊的本機視覺檢查截圖（虛構矩陣）。

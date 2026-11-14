@@ -11,9 +11,13 @@ Layer 1 中英文首頁原型已完成，延續 Startup Radar／Capability Store
 - 案件、組織與能力、改進紀錄三個入口，使用預覽對話框。
 - 五階段互動：提出問題 → 提出方案 → 外部審查 → 診斷與調整 → 驗證重用。
 - 示意案例與研究狀態明確標示；三種證據分開說明。
+- 問題與組織雙版本、可點選的交叉測試矩陣；矩陣結果完全虛構，非研究成果。
+- 規劃首批 10 題、保留舊版本，展示適應／泛化／能力保留。尚未選題或執行。
 - 中英文桌面與 320px 手機版已檢查。
 
-![Layer 1 首頁](presentation/layer-one-desktop.png)
+![Layer 1 首頁（初版截圖）](presentation/layer-one-desktop.png)
+
+![雙版本驗證示意](presentation/version-matrix-desktop.png)
 
 ## 本機啟動
 
@@ -64,3 +68,8 @@ GitHub：公開 repo https://github.com/vcstseng/evolving-ai 。
 網站：https://vcstseng.github.io/evolving-ai/ （英文：?lang=en）。
 
 GitHub Pages 透過 `.github/workflows/pages.yml` 發布，main 的 web/ 或 workflow 更新觸發部署。只上傳 index.html、app.js 與 styles.css；本機伺服器、研究文件與資料不納入網站 artifact。
+
+## 第一輪範圍收斂
+先選一種工作與數個案件，追蹤一次可識別的能力改變，檢查它在未見案件是否可重用，以及舊案是否退步。普通 Agent＋相同工具＋記憶與反思為必要探索性對照，保持相同可用資料、模型、工具權限與總預算。小型試行不支持統計優越性結論。
+
+首批 10 題仍為後續範圍規劃，尚未選定。第一輪不要求建立新 Agent，不必同時完成三組組織比較；自動出題、無限制擴編與版本路由留待後續。首頁雙版本矩陣僅展示測試概念。
