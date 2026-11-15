@@ -206,3 +206,8 @@ UI／UX 整理沿用 web/src/app.js、cases.js、case.js 與 styles.css；沒有
 - web/evidence/f03/source-line-endings.md：歷史交接器 LF／CRLF 指紋說明。
 - web/evidence/f03/v3-supplement-1.md：保留固定 v3 的小修補充。
 - presentation/gen3-gate-desktop.png：已實作狀態與限制的桌面檢查截圖。
+
+
+## 小型重用對照準備
+- experiments/protocols/TRANSFER_PILOT_V1.md：三組／四案例／兩次的規劃、預算與停止、隔離與分項評分、未決啟動條件；未出題／未執行。
+- experiments/protocols/PILOT.md、README.md：保留原方向，連至收斂後的準備稿。
