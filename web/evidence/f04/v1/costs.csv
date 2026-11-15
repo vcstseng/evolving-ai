@@ -1,0 +1,5 @@
+product,period,units,material_per_unit,material_price,hours_per_unit,hourly_rate,overhead_per_unit
+標準接頭,baseline,1000,2,10,0.5,40,5
+標準接頭,actual,800,2,14,0.4,40,5
+高壓接頭,baseline,500,3,10,0.6,40,6
+高壓接頭,actual,500,3,11,0.6,40,6

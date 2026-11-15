@@ -1,0 +1,46 @@
+{
+  "schema": 1,
+  "case": "f04",
+  "proposal_version": "v1",
+  "method_generation": "gen2",
+  "method_base_commit": "a2085d3d4571f5d2aa86e6ba88d971cb810880f9",
+  "date": "2026-11-15",
+  "run_id": "f04-gen2-20261115-01",
+  "status": "handoffs_complete_awaiting_external_review",
+  "completed_handoffs": 6,
+  "submissions": 6,
+  "rejections": 0,
+  "execution_mode": "Same conversation assists four handoffs; original Gen 2 tools execute evidence and finance. Not independent agents.",
+  "runtime_adapter": "Unmodified Gen 2 runner uses an ignored local workspace copy; its fixed f03-gen2.json input slot contains the F04 case configuration. No public F03 file or method was overwritten. The frozen_proposal slot pins this new brief, not an earlier solution.",
+  "new_capability": false,
+  "unseen_test": false,
+  "external_review": "pending",
+  "model_tokens": null,
+  "model_cost": null,
+  "business_outcome": "not_measured",
+  "adjustment": "request_evidence",
+  "diagnosis": "已能交條件式差異與優先序，仍不足以做根因、減人或換料決定；補證據比加角色或規則合理。",
+  "recommendation": "總成本下降主要來自標準接頭產量下降，不等於成本控制改善；按實際產量基準仍有正向剩餘差異。優先核對標準接頭的材料單價與批次成本，其次高壓接頭；工時歸因為有利抵銷，不將其當減人的理由。沒有採購根因與品質／需求依據前不換料或調人。",
+  "limitations": [
+    "兩期定義與工作日為合成來源宣告，未獨立驗真；可用性完整不等於業務充分",
+    "材料與工時為會計歸因，不是根因、效率或可節省額",
+    "總差異為負，不拿它當比例分母製造改善排行",
+    "同一對話知道前述討論，不能稱乾淨獨立世代或未見泛化；模型成本未知"
+  ],
+  "next_actions": [
+    {
+      "owner": "人類案件擁有者、採購、財務與品質，均待指派",
+      "scope": "只查標準接頭主要材料的一組基準／實際可比批次，不同時擴大到人力調整或換料",
+      "limit": "兩個工作日或四人時先到即收尾；採購兩小時、財務一小時、品質半小時、案件擁有者半小時，含取資料、協調及記錄，均待批准",
+      "minimum_evidence": "相同材料規格、合約／發票、運費與折扣、採用批次與庫存流轉引用",
+      "stop": "拿不到對帳資料即交支持／反證／未知及缺失來源；若需額外資料人員或更多投入，先另行申請，不沿用原上限",
+      "branch": "確認口徑或存貨時點問題先修基準；確認採購價格變化再評估供應選項，但無完整品質、安全、交期、預算及人類授權不試點"
+    }
+  ],
+  "method_sha256_lf": {
+    "src/gen2_analysis.py": "9700bbaaee869297bf178c58fb7d966914bfb0fa3f4eae3abb9aef502952e702",
+    "src/gen2_workflow.py": "b491462f8678710575622765fd5c4b6b5f723e861384bbe529cc2e6587c343e9",
+    "src/cost_analysis.py": "b2d4f3565235ff96af98b41d53b24c0dd307a19949dbe2a57e556414e62334cf",
+    "organization/roles/gen2.json": "8307f18d48b58b87c8e4c940db541c4fcc5cbf47d6e4eb2d2c81b9a443e8b568"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "synthetic": true,
+  "periods": {
+    "baseline": {
+      "start": "2026-09-01",
+      "end": "2026-09-30"
+    },
+    "actual": {
+      "start": "2026-10-01",
+      "end": "2026-10-30"
+    }
+  },
+  "definitions": {
+    "units": "驗收良品件數；兩期定義相同",
+    "hours_per_unit": "每良品件直接工時；兩期記錄範圍相同",
+    "material_price": "相同規格到廠加權單價，不含稅；兩期範圍相同",
+    "hourly_rate": "相同直接人工成本範圍；無已知口徑變更"
+  },
+  "operational_records": [
+    {
+      "reference": "synthetic-F04-production-declaration",
+      "description": "合成來源宣告兩期皆三十日曆日、二十排定工作日；同規格與記錄定義；未提供採購合約、批次／存貨流轉、配置、負荷或替代材料品質驗證。"
+    }
+  ]
+}

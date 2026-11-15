@@ -1,0 +1,110 @@
+{
+  "totals": {
+    "baseline": "75000",
+    "actual": "70700",
+    "variance": "-4300",
+    "flex_baseline": "66000",
+    "volume_effect": "-9000",
+    "non_volume_variance": "4700"
+  },
+  "fixed_order": [
+    "units",
+    "material_price",
+    "material_per_unit",
+    "hourly_rate",
+    "hours_per_unit",
+    "overhead_per_unit"
+  ],
+  "fixed_effects": {
+    "units": "-9000",
+    "material_price": "7900",
+    "material_per_unit": "0",
+    "hourly_rate": "0",
+    "hours_per_unit": "-3200",
+    "overhead_per_unit": "0"
+  },
+  "by_product": [
+    {
+      "product": "標準接頭",
+      "baseline": "45000",
+      "actual": "39200",
+      "flex_baseline": "36000",
+      "volume_effect": "-9000",
+      "non_volume_variance": "3200",
+      "effects": {
+        "units": "-9000",
+        "material_price": "6400",
+        "material_per_unit": "0",
+        "hourly_rate": "0",
+        "hours_per_unit": "-3200",
+        "overhead_per_unit": "0"
+      }
+    },
+    {
+      "product": "高壓接頭",
+      "baseline": "30000",
+      "actual": "31500",
+      "flex_baseline": "30000",
+      "volume_effect": "0",
+      "non_volume_variance": "1500",
+      "effects": {
+        "units": "0",
+        "material_price": "1500",
+        "material_per_unit": "0",
+        "hourly_rate": "0",
+        "hours_per_unit": "0",
+        "overhead_per_unit": "0"
+      }
+    }
+  ],
+  "sensitivity": {
+    "orders": 720,
+    "effects": {
+      "units": {
+        "min": "-10600",
+        "max": "-8200",
+        "mean": "-9400",
+        "mean_fraction": "-9400"
+      },
+      "material_price": {
+        "min": "7900",
+        "max": "9500",
+        "mean": "8700",
+        "mean_fraction": "8700"
+      },
+      "material_per_unit": {
+        "min": "0",
+        "max": "0",
+        "mean": "0",
+        "mean_fraction": "0"
+      },
+      "hourly_rate": {
+        "min": "0",
+        "max": "0",
+        "mean": "0",
+        "mean_fraction": "0"
+      },
+      "hours_per_unit": {
+        "min": "-4000",
+        "max": "-3200",
+        "mean": "-3600",
+        "mean_fraction": "-3600"
+      },
+      "overhead_per_unit": {
+        "min": "0",
+        "max": "0",
+        "mean": "0",
+        "mean_fraction": "0"
+      }
+    },
+    "hours_largest_in_every_order": false,
+    "adverse_drivers_by_mean": [
+      "material_price"
+    ]
+  },
+  "limitations": [
+    "Flexible baseline assumes the supplied per-unit cost model; it does not distinguish true fixed costs.",
+    "Order means are rounded to 12 decimal places; mean_fraction retains the exact rational value.",
+    "Accounting attribution and priority signals do not establish causes, avoidable waste or savings."
+  ]
+}

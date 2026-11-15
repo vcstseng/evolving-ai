@@ -1,0 +1,39 @@
+{
+  "source_refs": [
+    "web/evidence/f04/v1/costs.csv",
+    "web/evidence/f04/v1/metadata.json"
+  ],
+  "quality_checks": {
+    "cost_columns_checked": [
+      "hourly_rate",
+      "hours_per_unit",
+      "material_per_unit",
+      "material_price",
+      "overhead_per_unit",
+      "units"
+    ],
+    "rows_checked": 4,
+    "paired_products": [
+      "標準接頭",
+      "高壓接頭"
+    ],
+    "numeric_fields_checked": 24,
+    "periods": {
+      "status": "format_checked_not_independently_verified",
+      "days": [
+        30,
+        30
+      ]
+    },
+    "units_definition": "provided_unverified",
+    "hours_per_unit_definition": "provided_unverified",
+    "operational_records": "referenced_not_verified"
+  },
+  "gaps": [],
+  "permitted_uses": [
+    "Validated cost-field arithmetic; supplied metadata is not independently verified."
+  ],
+  "limitations": [
+    "An empty availability-gap list means required declarations were supplied, not that their content is true or business outcomes are verified."
+  ]
+}

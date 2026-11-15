@@ -1,7 +1,7 @@
-import { renderV3Shell } from './proposal-v3.js?v=exploration-01';
-import { renderReviewUpdate } from './revision.js?v=exploration-01';
-import { renderV2Shell, versionLinks } from './proposal-v2.js?v=exploration-01';
-import { renderGenerationTrail, renderReview, renderCandidate } from './evolution.js?v=exploration-01';
+import { renderV3Shell } from './proposal-v3.js?v=f04-gen2-1';
+import { renderReviewUpdate } from './revision.js?v=f04-gen2-1';
+import { renderV2Shell, versionLinks } from './proposal-v2.js?v=f04-gen2-1';
+import { renderGenerationTrail, renderReview, renderCandidate } from './evolution.js?v=f04-gen2-1';
 export function renderCase(lang,version='v3'){
 const isV2=version!=='v1';
 const isV3=version==='v3';

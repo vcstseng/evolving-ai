@@ -219,3 +219,13 @@ UI／UX 整理沿用 web/src/app.js、cases.js、case.js 與 styles.css；沒有
 - scripts/check_exploration_01.py：重現輸入、方法、數字與 gate；不偽稱可重現模型回答或獨立評分。
 - web/src/revision.js：沿用現有區塊加入負向／無差異結果與方案連結；無新 UI 模組。
 - presentation/exploration-01-desktop.png：兩題無差異、一題誤擋的頁面說明截圖。
+
+
+## F04：沿用 Gen 2 的新合成案例
+- cases/active/f04-gen2.json：新題與資料設定，保留原 F03 設定。
+- web/evidence/f04/v1/：brief.md、costs.csv、metadata.json、calculation.json、evidence-check.json、publication.json、proposal.md；公開整理交付，方案待外審。
+- scripts/check_f04.py：重算總額／單位成本／材料優先序，核對原方法指紋；非方案品質驗收。
+- runs/f04-gen2-workspace/：僅本機、Git 忽略；含原方法副本、輸入槽映射與原始六步紀錄，不上傳。
+- web/src/cases.js：現有列表增加 F04，直接閱讀完整方案；app.js 同步兩件合成案件的數量說明。
+- web/evidence/f04/v1/index.html：完整方案的靜態閱讀快照，沿用既有樣式；不建立新案例頁引擎。
+- presentation/f04-gen2-desktop.png：新題方案的桌面檢查截圖。

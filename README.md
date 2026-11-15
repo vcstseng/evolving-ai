@@ -6,6 +6,8 @@ AI 組織能力發展研究。工作名稱：Evolving AI Consulting Firm。
 
 ## 目前進度
 
+最新案例：[F04｜總成本下降，真的改善了嗎？](web/evidence/f04/v1/proposal.md) 已沿用未修改的 Gen 2 方法完成六步半自動交付。總成本 −4,300，但按實際產量的剩餘差異 +4,700，這次先查材料而非工時。方案待外審；同一對話依契約執行，不是乾淨 Gen 2 模型或未見測試。
+
 最新探索：依使用者選擇，以同一對話完成三個新合成實例的普通方案／套用固定 Gen 3 gate 後方案，**兩題未觀察到差異、一題誤擋**。詳 [結果與六份整理方案](web/evidence/exploration-01/results.md)。不是獨立兩組或未見測試，沒有分組成本；本輪不修改方法迎合結果，先停止擴充。
 
 最新：Gen 3 結構化閘門與獨立本機交接器已實作，固定原題／子問題／主張、解析引用、分離 L0–L3 並聚合，保留 Gen 2。詳 [操作與限制](docs/GEN3_IMPLEMENTATION.md)／[已知開發情境](web/evidence/gen3/development-results.json)。收到的 [v3 設計複審與回應](web/evidence/f03/review-v3/review-and-response.md) 沒有審過本實作；[v3 小修補充](web/evidence/f03/v3-supplement-1.md) 另存。已解釋 [LF／CRLF 雜湊差異](web/evidence/f03/source-line-endings.md)。沒有新的模型角色案件、未見實驗、成本優越或企業成效；原固定包不變。

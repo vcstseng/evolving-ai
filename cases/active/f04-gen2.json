@@ -1,0 +1,13 @@
+{
+  "id": "f04-gen2-exploration",
+  "kind": "synthetic",
+  "generation": "gen2",
+  "brief": "總成本下降是否代表成本控制改善？應優先查什麼？現在能否減人或替換材料？提出有界下一步。",
+  "source": "web/evidence/f04/v1/costs.csv",
+  "frozen_proposal": "web/evidence/f04/v1/brief.md",
+  "evidence_metadata": "web/evidence/f04/v1/metadata.json",
+  "max_submissions": 12,
+  "review_status": "awaiting_external_review",
+  "authorization": "Only public synthetic F04 input; no external model calls or enterprise writes.",
+  "context": "Same conversation applies frozen Gen 2; not independent/unseen. The old frozen_proposal input slot pins the brief here, not a previous solution."
+}

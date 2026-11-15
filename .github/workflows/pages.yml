@@ -42,6 +42,7 @@ jobs:
           python3 scripts/check_f03_revision.py
           python3 scripts/check_gen3.py
           python3 scripts/check_exploration_01.py
+          python3 scripts/check_f04.py
           python3 -m unittest discover -s tests -v
       - name: Prepare static website
         run: |
