@@ -182,3 +182,15 @@ UI／UX 整理沿用 web/src/app.js、cases.js、case.js 與 styles.css；沒有
 - .github/workflows/pages.yml：發布前加入上述結果重現檢查。
 - web/src/app.js：等案件內容載入後恢復頁內直達位置。
 - presentation/method-probe-desktop.png：三個公開合成情境的結果桌面截圖。
+
+
+## v2 複審收斂與方案 v3
+- web/evidence/f03/review-v2/review.md、response.md：外部審查結構化摘要與作者逐項回應，兩者分開。
+- web/evidence/f03/source-attribution.json：追溯方法版本／指紋的補充證據；不改固定 v2 或公開原始 run。
+- web/evidence/method-probe/revision-1.md、revision-1.json：等價對應、確定性數值性質與解讀修訂；保留原結果。
+- web/evidence/f03/v3/：proposal.md、publication.json、changes.md、review-brief.md、manifest.json；方案修訂，不是新 run。
+- organization/versions/GEN3_CANDIDATE.md：三層證據與決策閘門的候選設計，未實作。
+- scripts/package_f03_revision.py：一次性建立補充指紋、校正結果與 v3 清單，拒絕覆寫輸出。
+- scripts/check_f03_revision.py：固定 v3／補充數值與來源連續性檢查。
+- web/src/proposal-v3.js、revision.js：沿用既有案件頁呈現 v3 及審查回應；app／case／proposal-v2／evolution／cases 同步版本與狀態。
+- presentation/f03-v3-desktop.png：方案 v3 桌面驗證截圖。

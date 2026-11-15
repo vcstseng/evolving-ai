@@ -1,0 +1,36 @@
+{
+  "schema": 1,
+  "date": "2026-11-15",
+  "commits": {
+    "a2085d3": "a2085d3d4571f5d2aa86e6ba88d971cb810880f9",
+    "5fe2987": "5fe298720eefccc9b5e282b6a305b0d18cbb8d51",
+    "532359e": "532359e884e982b38646d43cc950bfec1c3c7e56"
+  },
+  "methods": [
+    {
+      "path": "src/gen2_analysis.py",
+      "sha256_lf": "9700bbaaee869297bf178c58fb7d966914bfb0fa3f4eae3abb9aef502952e702",
+      "commit_blob_sha256_lf": {
+        "a2085d3": "9700bbaaee869297bf178c58fb7d966914bfb0fa3f4eae3abb9aef502952e702",
+        "5fe2987": "9700bbaaee869297bf178c58fb7d966914bfb0fa3f4eae3abb9aef502952e702"
+      },
+      "author_checked_local_run_source_sha256": "9700bbaaee869297bf178c58fb7d966914bfb0fa3f4eae3abb9aef502952e702",
+      "source_url": "https://github.com/vcstseng/evolving-ai/blob/a2085d3d4571f5d2aa86e6ba88d971cb810880f9/src/gen2_analysis.py"
+    },
+    {
+      "path": "src/gen2_workflow.py",
+      "sha256_lf": "b491462f8678710575622765fd5c4b6b5f723e861384bbe529cc2e6587c343e9",
+      "commit_blob_sha256_lf": {
+        "a2085d3": "b491462f8678710575622765fd5c4b6b5f723e861384bbe529cc2e6587c343e9",
+        "5fe2987": "b491462f8678710575622765fd5c4b6b5f723e861384bbe529cc2e6587c343e9"
+      },
+      "author_checked_local_run_source_sha256": "6901fe4709929a6b88b6ccd65a8671b5a9267fbec93d5b9dfc023d0cb7f5f6ac",
+      "source_url": "https://github.com/vcstseng/evolving-ai/blob/a2085d3d4571f5d2aa86e6ba88d971cb810880f9/src/gen2_workflow.py"
+    }
+  ],
+  "calculation_sha256": "d2f1ae12d3ac95806546f67e49c80a90d10c1f312bfa4f1641f55d403dddc3d1",
+  "input_sha256": "99a35ba5f895e766505000d6f69c739134e2fc06e06729cf6172377df3c34d42",
+  "scope": "Retrospective source continuity check. Git blobs and figures can be checked publicly; original execution cannot be independently attested by this author statement.",
+  "raw_run_published": false,
+  "v2_changed": false
+}

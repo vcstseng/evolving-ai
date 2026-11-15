@@ -1,0 +1,30 @@
+{
+  "schema": 1,
+  "proposal_version": "v3",
+  "parent": "v2",
+  "kind": "editorial_revision_not_a_new_run",
+  "method_generation": "gen2",
+  "review_status": "awaiting_v3_review",
+  "parent_manifest_sha256": "d5a635a55e67513133fa90bff5978df1e2e6ef574dfd12bde101f885f5d56477",
+  "calculation_ref": "../v2/calculation.json",
+  "source_attribution_ref": "../source-attribution.json",
+  "review_ref": "../review-v2/review.md",
+  "files": [
+    {
+      "path": "proposal.md",
+      "sha256": "29788f0a30dca0f896a58ce48418963f10ac4b65338684b381ff769a9dff4e51"
+    },
+    {
+      "path": "publication.json",
+      "sha256": "162881923ae27c29bd3260340dc3e047cfea6b61004cd8698f6bf1ac81cb63d0"
+    },
+    {
+      "path": "changes.md",
+      "sha256": "34464026f92bb8372b36d975b0a1218f252c7558c052e69fca76a225a628eb3a"
+    },
+    {
+      "path": "review-brief.md",
+      "sha256": "9843962cbb8f431b220b876ecd8de949b6b2c6311f07e0a1758b09b347cf7146"
+    }
+  ]
+}

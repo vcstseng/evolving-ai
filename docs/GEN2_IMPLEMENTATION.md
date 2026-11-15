@@ -61,3 +61,7 @@ web/evidence/gen2-checks.json 是程式測試結果摘要；f03-gen2-calculation
 
 ## 後續：方法覆蓋與可比性邊界
 三個公開合成情境的工具檢查已執行，詳 web/evidence/method-probe/。方法保持 5fe2987 不變。Gen 2 能輸出彈性基準與順序敏感度，但不解析本次提供的 hourly_rate_comparison 語意，因此漏掉明示的兩期工資率定義衝突。空 availability gaps 僅表示目前檢查所要求的宣告存在，不是 no_gap 決策充分條件。此輪不改 Gen 2、不跑 CD，也不替 Claude 驗收。不能將這些公開 fixture 納入後續未見測試。
+
+
+## 後續：v2 複審與 Gen 3 設計
+v2 外部複審已收到，摘要與回應在 web/evidence/f03/review-v2/；方案另存 v3，Gen 2 程式仍固定。source-attribution.json 連結歷史提交與同一來源指紋。等價輸出／性質檢查見 method-probe/revision-1。GEN3_CANDIDATE.md 只定義下一版閘門，沒有修改此 runner，原可比性風險仍存在。後續不得把方案 v3 或設計文件當成已執行的 Gen 3。

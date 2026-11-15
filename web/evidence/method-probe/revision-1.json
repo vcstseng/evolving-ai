@@ -1,0 +1,112 @@
+{
+  "schema": 1,
+  "date": "2026-11-15",
+  "kind": "corrected development coverage report, not a generation ranking",
+  "supersedes_interpretation_of": "results.json",
+  "original_results_sha256": "ceaeb732e802f3d877f6365ca458ed7e830b2b91fb2452c4d436a30bef7bfb45",
+  "mapping": {
+    "volume_effect": "Gen 1 effects[field=units].amount",
+    "non_volume_variance": "Gen 1 variance minus units amount"
+  },
+  "cases": [
+    {
+      "id": "volume",
+      "gen1_equivalent": {
+        "baseline": "1000",
+        "actual": "2200",
+        "variance": "1200",
+        "volume_effect": "1000",
+        "non_volume_variance": "200"
+      },
+      "gen2_equivalent": {
+        "baseline": "1000",
+        "actual": "2200",
+        "variance": "1200",
+        "volume_effect": "1000",
+        "non_volume_variance": "200"
+      },
+      "invariants": {
+        "equivalent_totals_match": true,
+        "fixed_bridges_match": true,
+        "gen1_bridge_sums_to_variance": true,
+        "gen2_bridge_sums_to_variance": true,
+        "exact_order_means_sum_to_variance": true,
+        "baseline_plus_volume_equals_flex": true,
+        "flex_plus_residual_equals_actual": true,
+        "fixed_and_mean_within_ranges": true
+      },
+      "coverage_only": {
+        "gen1": "fixed-order bridge; volume is present; residual is derived",
+        "gen2": "explicit flexible baseline, product split and order sensitivity"
+      },
+      "semantic_comparability_fixed": false
+    },
+    {
+      "id": "order",
+      "gen1_equivalent": {
+        "baseline": "1000",
+        "actual": "6000",
+        "variance": "5000",
+        "volume_effect": "0",
+        "non_volume_variance": "5000"
+      },
+      "gen2_equivalent": {
+        "baseline": "1000",
+        "actual": "6000",
+        "variance": "5000",
+        "volume_effect": "0",
+        "non_volume_variance": "5000"
+      },
+      "invariants": {
+        "equivalent_totals_match": true,
+        "fixed_bridges_match": true,
+        "gen1_bridge_sums_to_variance": true,
+        "gen2_bridge_sums_to_variance": true,
+        "exact_order_means_sum_to_variance": true,
+        "baseline_plus_volume_equals_flex": true,
+        "flex_plus_residual_equals_actual": true,
+        "fixed_and_mean_within_ranges": true
+      },
+      "coverage_only": {
+        "gen1": "fixed-order bridge; volume is present; residual is derived",
+        "gen2": "explicit flexible baseline, product split and order sensitivity"
+      },
+      "semantic_comparability_fixed": false
+    },
+    {
+      "id": "definition",
+      "gen1_equivalent": {
+        "baseline": "1000",
+        "actual": "1500",
+        "variance": "500",
+        "volume_effect": "0",
+        "non_volume_variance": "500"
+      },
+      "gen2_equivalent": {
+        "baseline": "1000",
+        "actual": "1500",
+        "variance": "500",
+        "volume_effect": "0",
+        "non_volume_variance": "500"
+      },
+      "invariants": {
+        "equivalent_totals_match": true,
+        "fixed_bridges_match": true,
+        "gen1_bridge_sums_to_variance": true,
+        "gen2_bridge_sums_to_variance": true,
+        "exact_order_means_sum_to_variance": true,
+        "baseline_plus_volume_equals_flex": true,
+        "flex_plus_residual_equals_actual": true,
+        "fixed_and_mean_within_ranges": true
+      },
+      "coverage_only": {
+        "gen1": "fixed-order bridge; volume is present; residual is derived",
+        "gen2": "explicit flexible baseline, product split and order sensitivity"
+      },
+      "semantic_comparability_fixed": false
+    }
+  ],
+  "models_called": 0,
+  "unseen_test": false,
+  "note": "The definition mismatch remains unhandled. Properties verify arithmetic consistency, not comparability or proposal acceptance."
+}

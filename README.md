@@ -6,7 +6,7 @@ AI 組織能力發展研究。工作名稱：Evolving AI Consulting Firm。
 
 ## 目前進度
 
-最新：完成三個公開合成情境的固定方法檢查。兩代成本計算皆符合預期；Gen 2 提供產量分離與順序敏感度，但未檢出明示的工資率定義衝突。這是工具覆蓋檢查，不是未見 Agent 實驗；F03 v2 仍待 Claude 複審。詳 [規則](web/evidence/method-probe/protocol.md)／[結果與盲點](web/evidence/method-probe/results.md)。
+最新：已收到使用者轉貼的 Claude v2 複審，保存 [審查摘要](web/evidence/f03/review-v2/review.md) 與 [F1–F7 回應](web/evidence/f03/review-v2/response.md)。另存 [方案 v3](web/evidence/f03/v3/proposal.md)（外部審查驅動的文字修訂，沒有新重跑），校正 [方法覆蓋比較](web/evidence/method-probe/revision-1.md)，補上 [來源指紋](web/evidence/f03/source-attribution.json)。[Gen 3](organization/versions/GEN3_CANDIDATE.md) 僅完成設計，尚未實作。v1／v2／兩代程式與原 probe 保留，定義衝突閘門仍未修復；v3 待外部審查，跨案效果未知。
 
 Layer 1 中英文首頁原型已完成，延續 Startup Radar／Capability Store 的視覺風格。Layer 2 已加入 F03 歷史合成案例整理，含方案與 Claude 驗證交付材料；已加入本機半自動案件交接器，完成 Gen 1 與 Gen 2 的同案交付；尚無自主 LLM 調度、獨立多 Agent、能力演化或企業成效結果。
 
@@ -84,7 +84,7 @@ GitHub Pages 透過 `.github/workflows/pages.yml` 發布，main 的 web/ 或 wor
 交付依問題定義：方案本身可為完整成果，不要求每題都有 CSV、程式或附件。案件頁以方案 → Claude 審查 → 後續修改為主線。發布狀態以 GitHub Pages 最新部署為準。
 
 ## 案件列表與保留版本
-[案件列表](https://vcstseng.github.io/evolving-ai/?lang=zh&view=cases) 依待解題、待審查、修改中與待重用測試篩選。目前僅 F03 歷史合成案例，Claude 審查已收到，Gen 2 已完成同案半自動重跑，方案 v2 待複審，沒有填入未執行的假案件。
+[案件列表](https://vcstseng.github.io/evolving-ai/?lang=zh&view=cases) 依待解題、待審查、修改中與待重用測試篩選。目前僅 F03 歷史合成案例，Claude 審查已收到，Gen 2 已完成同案半自動重跑，v2 複審已收到，方案 v3 待審查，沒有填入未執行的假案件。
 
 `web/evidence/f03/v1/` 固定既有題目、限制、方案文件與選用資料，文字統一 LF；`manifest.json` 記錄來源提交與 SHA-256。v1 是文件快照，不是 Agent 世代。後續修改另存新版本，保留來源審查、理由與分歧，不覆寫 v1。執行 `python scripts/check_versions.py` 核對保留內容完整性。
 
@@ -101,7 +101,7 @@ GitHub Pages 透過 `.github/workflows/pages.yml` 發布，main 的 web/ 或 wor
 ## Gen 2 程式入口
 詳 [Gen 2 實作與限制](docs/GEN2_IMPLEMENTATION.md)。`python -X utf8 -m src.gen2_workflow` 使用獨立角色契約與案件設定，保留原 Gen 1。新增依實際資料的可用性檢查、CD 完整依據與 no_gap、產量／產品／720 順序分析，以及工具綁定的結構化數值。
 
-程式測試與已知 F03 工具回歸已通過；已完成六步半自動重跑並保存方案 v2；Claude 複審、未見重用與對照尚未完成。原始交付仍只存本機；公開的是測試摘要與合成資料計算輸出。
+程式測試與已知 F03 工具回歸已通過；已完成六步半自動重跑並保存方案 v2；Claude v2 複審已收到；v3 審查、未見重用與對照尚未完成。原始交付仍只存本機；公開的是測試摘要與合成資料計算輸出。
 
 ## F03 方案 v2 已整理
 預設案件頁閱讀 Gen 2 方案 v2，可切換保留的 v1。完整交付、計算與複審說明在 [v2 交付包](web/evidence/f03/v2/proposal.md)。本輪 f03-gen2-20261115-01 六步／六次提交、無拒收，仍選補證據，無新增 Agent。

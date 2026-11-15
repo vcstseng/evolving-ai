@@ -1,0 +1,83 @@
+{
+  "schema": 1,
+  "proposal_version": "v3",
+  "parent": "v2",
+  "date": "2026-11-15",
+  "kind": "editorial_revision_from_external_review",
+  "method_generation": "gen2",
+  "new_run": false,
+  "gen3_implemented": false,
+  "review_status": "awaiting_v3_review",
+  "model_cost": null,
+  "unseen_test": false,
+  "sections": [
+    {
+      "title": [
+        "先核對需求與可比性",
+        "Confirm demand and comparability"
+      ],
+      "paragraphs": [
+        [
+          "日期、良品／重工、成本範圍與需求／庫存尚待核對。增加產量若沒有需求支持，也可能形成不必要庫存；不預設量變合理。",
+          "Dates, good-unit/rework definitions, cost scope and demand/inventory remain unverified. Increased output may create unnecessary inventory; volume is not assumed justified."
+        ],
+        [
+          "先查馬達 BOM／規格／製程／批量是否同時影響工時與材料，再核對工資率口徑。這些是假設，不是已確認的共同原因。",
+          "Investigate whether motor BOM, specifications, process or batch changes affect both hours and materials, then reconcile wage-rate scope. These are hypotheses, not established causes."
+        ]
+      ]
+    },
+    {
+      "title": [
+        "保留 37,300，分開說明不同假設",
+        "Keep 37,300 and distinguish assumptions"
+      ],
+      "paragraphs": [
+        [
+          "原始成本 166,000 → 225,300，差異 59,300。以基準每單位成本按實際產量計算，基準為 188,000、產量效應 22,000、剩餘 37,300；不是節省額。",
+          "Costs are 166,000 → 225,300, a difference of 59,300. At baseline unit costs and actual volume, the flexible baseline is 188,000, volume effect 22,000 and residual 37,300; none establishes savings."
+        ],
+        [
+          "更換歸因順序時，相應剩餘為 30,500–38,750，這是交互項分配敏感度，不是信賴區間。若 X 製造費用為固定總額，另一模型下剩餘為 39,300；此假設未經資料確認。",
+          "Across attribution orders the corresponding residual is 30,500–38,750: an allocation sensitivity, not a confidence interval. Assuming fixed total overhead for X produces a separate model residual of 39,300; this assumption is unverified."
+        ]
+      ]
+    },
+    {
+      "title": [
+        "調查優先序",
+        "Investigation priorities"
+      ],
+      "paragraphs": [
+        [
+          "前置核對需求及定義 → 馬達的材料／工時共同變動假設 → 工資率口徑與人員組合。指定模型下馬達剩餘 32,100、定位器 5,200，後者先保留監測。",
+          "Demand and definitions first → joint motor material/hour hypotheses → wage-rate scope and staffing. Under the specified model, residuals are 32,100 for the motor and 5,200 for the positioner, which remains monitored."
+        ],
+        [
+          "工時在 720 順序皆為最大正向歸因，值得優先取得證據；不代表效率差或可控制損失，新增證據可改變方向。",
+          "Hours are the largest positive attribution in all 720 orders, supporting priority evidence collection, not a conclusion of inefficiency or controllable loss. New evidence may change the direction."
+        ]
+      ]
+    },
+    {
+      "title": [
+        "所有調查步驟共用上限",
+        "A shared limit across all investigation steps"
+      ],
+      "paragraphs": [
+        [
+          "待人類確認：單一馬達、一組可比工單，五個工作日內；財務四小時、營運四小時、品質一小時，共九人時，含協調、取資料、分析及記錄。不是每步重置，也不保證足夠。",
+          "Subject to human approval: one motor, one comparable work-order group, within five business days; finance four hours, operations four, quality one, totaling nine person-hours including coordination, data, analysis and recording. Limits do not reset per step and may be insufficient."
+        ],
+        [
+          "第 1–2 日核對能否開始；第 3–4 日查共同假設；第 5 日核對率差並整合。任一上限先到、無授權或資料矛盾即停止相關判斷並交受限結論；延長須重新批准。詳完整方案的逐步投入分配。",
+          "Days 1–2 check readiness; days 3–4 examine joint hypotheses; day 5 reconcile rates and close. Stop affected judgments at any limit, missing authorization or conflicting data, and report limitations. Extensions need new approval; step allocations are in the full proposal."
+        ],
+        [
+          "現場試點屬後續另案。原因可控制、量測、完整預算、期限、負責人、品質安全與交期、回復條件及人工授權全部具備前，不啟動；不以任意歸因百分比放行。",
+          "An operational pilot is a separate future decision. It requires a controllable cause, measurement, full budget, duration, owner, quality/safety/delivery criteria, rollback and human approval; an arbitrary attribution percentage cannot authorize it."
+        ]
+      ]
+    }
+  ]
+}
