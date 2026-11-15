@@ -194,3 +194,15 @@ UI／UX 整理沿用 web/src/app.js、cases.js、case.js 與 styles.css；沒有
 - scripts/check_f03_revision.py：固定 v3／補充數值與來源連續性檢查。
 - web/src/proposal-v3.js、revision.js：沿用既有案件頁呈現 v3 及審查回應；app／case／proposal-v2／evolution／cases 同步版本與狀態。
 - presentation/f03-v3-desktop.png：方案 v3 桌面驗證截圖。
+
+
+## Gen 3 結構化閘門實作
+- src/gen3_policy.py：原題／主張覆蓋、可比性與引用文字解析、L0–L3 聚合；不驗真來源或自然語言因果。
+- src/gen3_workflow.py、organization/roles/gen3.json、cases/active/f03-gen3.json：獨立半自動 runner 與契約，保留 Gen 2。
+- tests/test_gen3.py：敵意輸入、合成流程及數值邊界測試。
+- docs/GEN3_IMPLEMENTATION.md：操作、已實作與不支援範圍。
+- scripts/check_gen3.py、web/evidence/gen3/metadata-clean.json、development-results.json：公開合成開發情境與正規化指紋重現。
+- web/evidence/f03/review-v3/review-and-response.md：設計複審摘要與回應，非逐字全文或實作驗收。
+- web/evidence/f03/source-line-endings.md：歷史交接器 LF／CRLF 指紋說明。
+- web/evidence/f03/v3-supplement-1.md：保留固定 v3 的小修補充。
+- presentation/gen3-gate-desktop.png：已實作狀態與限制的桌面檢查截圖。

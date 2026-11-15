@@ -1,0 +1,110 @@
+{
+  "synthetic": true,
+  "periods": {
+    "baseline": {
+      "start": "2026-09-01",
+      "end": "2026-09-30"
+    },
+    "actual": {
+      "start": "2026-10-01",
+      "end": "2026-10-30"
+    }
+  },
+  "definitions": {
+    "units": "Completed units, same definition in both periods",
+    "hours_per_unit": "Recorded direct labor hours per completed unit"
+  },
+  "operational_records": [
+    {
+      "reference": "synthetic-declaration-only",
+      "description": "Fixture reference, not independently verified operational evidence"
+    }
+  ],
+  "evidence_sources": {
+    "fixture": {
+      "owner": "Synthetic fixture author",
+      "reference": "public development fixture, not a real work order",
+      "description": "Input definition text inspected in a synthetic fixture; not independently verified business evidence.",
+      "text": "periods on the same declared basis\nunits on the same declared basis\nmaterial_price on the same declared basis\nmaterial_per_unit on the same declared basis\nhourly_rate on the same declared basis\nhours_per_unit on the same declared basis\noverhead_per_unit on the same declared basis"
+    }
+  },
+  "comparability": {
+    "periods": {
+      "status": "yes",
+      "baseline_definition": "periods on the same declared basis",
+      "actual_definition": "periods on the same declared basis",
+      "source_refs": [
+        "fixture"
+      ],
+      "verification": "inspected",
+      "reason": "Definitions are asserted consistent for this development fixture.",
+      "resolution": "No declared discrepancy; source truth remains unverified."
+    },
+    "units": {
+      "status": "yes",
+      "baseline_definition": "units on the same declared basis",
+      "actual_definition": "units on the same declared basis",
+      "source_refs": [
+        "fixture"
+      ],
+      "verification": "inspected",
+      "reason": "Definitions are asserted consistent for this development fixture.",
+      "resolution": "No declared discrepancy; source truth remains unverified."
+    },
+    "material_price": {
+      "status": "yes",
+      "baseline_definition": "material_price on the same declared basis",
+      "actual_definition": "material_price on the same declared basis",
+      "source_refs": [
+        "fixture"
+      ],
+      "verification": "inspected",
+      "reason": "Definitions are asserted consistent for this development fixture.",
+      "resolution": "No declared discrepancy; source truth remains unverified."
+    },
+    "material_per_unit": {
+      "status": "yes",
+      "baseline_definition": "material_per_unit on the same declared basis",
+      "actual_definition": "material_per_unit on the same declared basis",
+      "source_refs": [
+        "fixture"
+      ],
+      "verification": "inspected",
+      "reason": "Definitions are asserted consistent for this development fixture.",
+      "resolution": "No declared discrepancy; source truth remains unverified."
+    },
+    "hourly_rate": {
+      "status": "yes",
+      "baseline_definition": "hourly_rate on the same declared basis",
+      "actual_definition": "hourly_rate on the same declared basis",
+      "source_refs": [
+        "fixture"
+      ],
+      "verification": "inspected",
+      "reason": "Definitions are asserted consistent for this development fixture.",
+      "resolution": "No declared discrepancy; source truth remains unverified."
+    },
+    "hours_per_unit": {
+      "status": "yes",
+      "baseline_definition": "hours_per_unit on the same declared basis",
+      "actual_definition": "hours_per_unit on the same declared basis",
+      "source_refs": [
+        "fixture"
+      ],
+      "verification": "inspected",
+      "reason": "Definitions are asserted consistent for this development fixture.",
+      "resolution": "No declared discrepancy; source truth remains unverified."
+    },
+    "overhead_per_unit": {
+      "status": "yes",
+      "baseline_definition": "overhead_per_unit on the same declared basis",
+      "actual_definition": "overhead_per_unit on the same declared basis",
+      "source_refs": [
+        "fixture"
+      ],
+      "verification": "inspected",
+      "reason": "Definitions are asserted consistent for this development fixture.",
+      "resolution": "No declared discrepancy; source truth remains unverified."
+    }
+  }
+}

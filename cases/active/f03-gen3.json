@@ -1,0 +1,52 @@
+{
+  "id": "f03-gen3-pilot",
+  "kind": "synthetic",
+  "brief": "兩項產品實際成本高於基準，哪些差異應優先調查？如何在品質、安全及交期限制內提出下一步方案？",
+  "source": "web/evidence/f03/v1/f03-costs.csv",
+  "frozen_proposal": "web/evidence/f03/v1/proposal.md",
+  "max_submissions": 12,
+  "review_status": "awaiting_claude",
+  "authorization": "Only the existing public synthetic F03 evidence; no enterprise writes or external model transmission.",
+  "context": "Known F03 development regression for a scoped evidence gate; not unseen or independent-agent research.",
+  "generation": "gen3",
+  "evidence_metadata": null,
+  "requested_decision": {
+    "decision": "兩項產品實際成本高於基準，哪些差異應優先調查？如何在品質、安全及交期限制內提出下一步方案？",
+    "claims": [
+      {
+        "id": "conditional_costs",
+        "kind": "conditional_arithmetic",
+        "required": false,
+        "answers": [
+          "priority"
+        ]
+      },
+      {
+        "id": "priority_basis",
+        "kind": "comparable_attribution",
+        "required": true,
+        "answers": [
+          "priority"
+        ]
+      },
+      {
+        "id": "next_evidence",
+        "kind": "evidence_plan",
+        "required": true,
+        "answers": [
+          "next"
+        ]
+      }
+    ],
+    "questions": [
+      {
+        "id": "priority",
+        "text": "哪些差異應優先調查？"
+      },
+      {
+        "id": "next",
+        "text": "如何在品質、安全及交期限制內提出下一步方案？"
+      }
+    ]
+  }
+}

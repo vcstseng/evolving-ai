@@ -6,7 +6,7 @@ AI 組織能力發展研究。工作名稱：Evolving AI Consulting Firm。
 
 ## 目前進度
 
-最新：已收到使用者轉貼的 Claude v2 複審，保存 [審查摘要](web/evidence/f03/review-v2/review.md) 與 [F1–F7 回應](web/evidence/f03/review-v2/response.md)。另存 [方案 v3](web/evidence/f03/v3/proposal.md)（外部審查驅動的文字修訂，沒有新重跑），校正 [方法覆蓋比較](web/evidence/method-probe/revision-1.md)，補上 [來源指紋](web/evidence/f03/source-attribution.json)。[Gen 3](organization/versions/GEN3_CANDIDATE.md) 僅完成設計，尚未實作。v1／v2／兩代程式與原 probe 保留，定義衝突閘門仍未修復；v3 待外部審查，跨案效果未知。
+最新：Gen 3 結構化閘門與獨立本機交接器已實作，固定原題／子問題／主張、解析引用、分離 L0–L3 並聚合，保留 Gen 2。詳 [操作與限制](docs/GEN3_IMPLEMENTATION.md)／[已知開發情境](web/evidence/gen3/development-results.json)。收到的 [v3 設計複審與回應](web/evidence/f03/review-v3/review-and-response.md) 沒有審過本實作；[v3 小修補充](web/evidence/f03/v3-supplement-1.md) 另存。已解釋 [LF／CRLF 雜湊差異](web/evidence/f03/source-line-endings.md)。沒有新的模型角色案件、未見實驗、成本優越或企業成效；原固定包不變。
 
 Layer 1 中英文首頁原型已完成，延續 Startup Radar／Capability Store 的視覺風格。Layer 2 已加入 F03 歷史合成案例整理，含方案與 Claude 驗證交付材料；已加入本機半自動案件交接器，完成 Gen 1 與 Gen 2 的同案交付；尚無自主 LLM 調度、獨立多 Agent、能力演化或企業成效結果。
 

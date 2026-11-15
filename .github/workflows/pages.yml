@@ -40,6 +40,7 @@ jobs:
           python3 scripts/check_f03_v2.py
           python3 scripts/check_method_probe.py
           python3 scripts/check_f03_revision.py
+          python3 scripts/check_gen3.py
           python3 -m unittest discover -s tests -v
       - name: Prepare static website
         run: |

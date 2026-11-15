@@ -1,0 +1,337 @@
+{
+  "schema": 1,
+  "date": "2026-11-15",
+  "generation": "gen3",
+  "scope": "Deterministic development gate examples, not complete model-assisted case reruns or unseen transfer.",
+  "model_calls": 0,
+  "external_review": "not_reviewed_as_implementation",
+  "unseen_test": false,
+  "cases": [
+    {
+      "id": "definition_conflict",
+      "input": "web/evidence/method-probe/definition.csv",
+      "metadata": "web/evidence/method-probe/definition-metadata.json",
+      "requested_claims": {
+        "decision": "Assess the requested rate difference without claiming source truth.",
+        "questions": [
+          {
+            "id": "q",
+            "text": "Assess the requested rate difference without claiming source truth."
+          }
+        ],
+        "claims": [
+          {
+            "id": "requested",
+            "kind": "rate_change",
+            "required": true,
+            "answers": [
+              "q"
+            ]
+          }
+        ]
+      },
+      "gen2_availability_gap_ids": [],
+      "gen3_decision": "request_evidence",
+      "run_level": 1,
+      "requested_decision_answered": false,
+      "permitted_claims": [],
+      "blocked_claims": [
+        "requested"
+      ],
+      "comparability": [
+        {
+          "field": "periods",
+          "status": "unknown",
+          "reason": "Missing, malformed or unsupported comparability declaration."
+        },
+        {
+          "field": "units",
+          "status": "unknown",
+          "reason": "Missing, malformed or unsupported comparability declaration."
+        },
+        {
+          "field": "material_price",
+          "status": "unknown",
+          "reason": "Missing, malformed or unsupported comparability declaration."
+        },
+        {
+          "field": "material_per_unit",
+          "status": "unknown",
+          "reason": "Missing, malformed or unsupported comparability declaration."
+        },
+        {
+          "field": "hourly_rate",
+          "status": "no",
+          "reason": "Explicit hourly-rate comparison conflicts; positive declarations cannot override it."
+        },
+        {
+          "field": "hours_per_unit",
+          "status": "unknown",
+          "reason": "Missing, malformed or unsupported comparability declaration."
+        },
+        {
+          "field": "overhead_per_unit",
+          "status": "unknown",
+          "reason": "Missing, malformed or unsupported comparability declaration."
+        }
+      ],
+      "review_status": "pending"
+    },
+    {
+      "id": "unknown",
+      "input": "web/evidence/method-probe/definition.csv",
+      "metadata": "web/evidence/method-probe/metadata.json",
+      "requested_claims": {
+        "decision": "Assess the requested rate difference without claiming source truth.",
+        "questions": [
+          {
+            "id": "q",
+            "text": "Assess the requested rate difference without claiming source truth."
+          }
+        ],
+        "claims": [
+          {
+            "id": "requested",
+            "kind": "rate_change",
+            "required": true,
+            "answers": [
+              "q"
+            ]
+          },
+          {
+            "id": "calculation",
+            "kind": "conditional_arithmetic",
+            "required": false,
+            "answers": [
+              "q"
+            ]
+          }
+        ]
+      },
+      "gen2_availability_gap_ids": [],
+      "gen3_decision": "conditional_delivery",
+      "run_level": 1,
+      "requested_decision_answered": false,
+      "permitted_claims": [
+        "calculation"
+      ],
+      "blocked_claims": [
+        "requested"
+      ],
+      "comparability": [
+        {
+          "field": "periods",
+          "status": "unknown",
+          "reason": "Missing, malformed or unsupported comparability declaration."
+        },
+        {
+          "field": "units",
+          "status": "unknown",
+          "reason": "Missing, malformed or unsupported comparability declaration."
+        },
+        {
+          "field": "material_price",
+          "status": "unknown",
+          "reason": "Missing, malformed or unsupported comparability declaration."
+        },
+        {
+          "field": "material_per_unit",
+          "status": "unknown",
+          "reason": "Missing, malformed or unsupported comparability declaration."
+        },
+        {
+          "field": "hourly_rate",
+          "status": "unknown",
+          "reason": "Missing, malformed or unsupported comparability declaration."
+        },
+        {
+          "field": "hours_per_unit",
+          "status": "unknown",
+          "reason": "Missing, malformed or unsupported comparability declaration."
+        },
+        {
+          "field": "overhead_per_unit",
+          "status": "unknown",
+          "reason": "Missing, malformed or unsupported comparability declaration."
+        }
+      ],
+      "review_status": "pending"
+    },
+    {
+      "id": "clean",
+      "input": "web/evidence/method-probe/definition.csv",
+      "metadata": "web/evidence/gen3/metadata-clean.json",
+      "requested_claims": {
+        "decision": "Assess the requested rate difference without claiming source truth.",
+        "questions": [
+          {
+            "id": "q",
+            "text": "Assess the requested rate difference without claiming source truth."
+          }
+        ],
+        "claims": [
+          {
+            "id": "requested",
+            "kind": "conditional_arithmetic",
+            "required": true,
+            "answers": [
+              "q"
+            ]
+          }
+        ]
+      },
+      "gen2_availability_gap_ids": [],
+      "gen3_decision": "no_gap",
+      "run_level": 3,
+      "requested_decision_answered": true,
+      "permitted_claims": [
+        "requested"
+      ],
+      "blocked_claims": [],
+      "comparability": [
+        {
+          "field": "periods",
+          "status": "yes",
+          "reason": "Consistent structured declaration with identifiable references; truth is unverified."
+        },
+        {
+          "field": "units",
+          "status": "yes",
+          "reason": "Consistent structured declaration with identifiable references; truth is unverified."
+        },
+        {
+          "field": "material_price",
+          "status": "yes",
+          "reason": "Consistent structured declaration with identifiable references; truth is unverified."
+        },
+        {
+          "field": "material_per_unit",
+          "status": "yes",
+          "reason": "Consistent structured declaration with identifiable references; truth is unverified."
+        },
+        {
+          "field": "hourly_rate",
+          "status": "yes",
+          "reason": "Consistent structured declaration with identifiable references; truth is unverified."
+        },
+        {
+          "field": "hours_per_unit",
+          "status": "yes",
+          "reason": "Consistent structured declaration with identifiable references; truth is unverified."
+        },
+        {
+          "field": "overhead_per_unit",
+          "status": "yes",
+          "reason": "Consistent structured declaration with identifiable references; truth is unverified."
+        }
+      ],
+      "review_status": "pending"
+    },
+    {
+      "id": "unresolved_cause",
+      "input": "web/evidence/method-probe/definition.csv",
+      "metadata": "web/evidence/gen3/metadata-clean.json",
+      "requested_claims": {
+        "decision": "Assess the requested rate difference without claiming source truth.",
+        "questions": [
+          {
+            "id": "q",
+            "text": "Assess the requested rate difference without claiming source truth."
+          }
+        ],
+        "claims": [
+          {
+            "id": "requested",
+            "kind": "causal",
+            "required": true,
+            "answers": [
+              "q"
+            ]
+          },
+          {
+            "id": "calculation",
+            "kind": "conditional_arithmetic",
+            "required": false,
+            "answers": [
+              "q"
+            ]
+          }
+        ]
+      },
+      "gen2_availability_gap_ids": [],
+      "gen3_decision": "conditional_delivery",
+      "run_level": 1,
+      "requested_decision_answered": false,
+      "permitted_claims": [
+        "calculation"
+      ],
+      "blocked_claims": [
+        "requested"
+      ],
+      "comparability": [
+        {
+          "field": "periods",
+          "status": "yes",
+          "reason": "Consistent structured declaration with identifiable references; truth is unverified."
+        },
+        {
+          "field": "units",
+          "status": "yes",
+          "reason": "Consistent structured declaration with identifiable references; truth is unverified."
+        },
+        {
+          "field": "material_price",
+          "status": "yes",
+          "reason": "Consistent structured declaration with identifiable references; truth is unverified."
+        },
+        {
+          "field": "material_per_unit",
+          "status": "yes",
+          "reason": "Consistent structured declaration with identifiable references; truth is unverified."
+        },
+        {
+          "field": "hourly_rate",
+          "status": "yes",
+          "reason": "Consistent structured declaration with identifiable references; truth is unverified."
+        },
+        {
+          "field": "hours_per_unit",
+          "status": "yes",
+          "reason": "Consistent structured declaration with identifiable references; truth is unverified."
+        },
+        {
+          "field": "overhead_per_unit",
+          "status": "yes",
+          "reason": "Consistent structured declaration with identifiable references; truth is unverified."
+        }
+      ],
+      "review_status": "pending"
+    }
+  ],
+  "source_sha256_lf": {
+    "src/gen3_policy.py": "0fb8fa6b6b019d63b83b19bb044eb4b03e5d530e5f39c2c20ef1b7657cba6d65",
+    "src/gen3_workflow.py": "93dbbcb2dbe38cbedb68c27fa3aa48797f6663468d1cd5d2bb283134d4d4851a",
+    "src/gen2_analysis.py": "9700bbaaee869297bf178c58fb7d966914bfb0fa3f4eae3abb9aef502952e702",
+    "src/cost_analysis.py": "b2d4f3565235ff96af98b41d53b24c0dd307a19949dbe2a57e556414e62334cf",
+    "organization/roles/gen3.json": "8acb9aea4d96babf3345aad268c4bffc640d529147cacb26154c3c79e57f55f2",
+    "cases/active/f03-gen3.json": "e8a2f52542681b2d674202d3786019baa945324bcd58d8f303cbb80023f62d3a",
+    "tests/test_gen3.py": "55a137ee18546049aaadfd11bc7e85ea8b95375bce65447a221edc1f8cfe95dc",
+    "web/evidence/method-probe/definition.csv": "f340a65e83e1cfe4c7ed4d3e0897fbacdefdc6cdab2bcbd7e9ed6ce9e0902819",
+    "web/evidence/gen3/metadata-clean.json": "062a6c9053ecf33defe102e0edf4f2b1fd8d1f387c123bbfdfdea0c3c5a53b46",
+    "web/evidence/method-probe/metadata.json": "aca6d24cb7a155682d75a8cbfbebe5b4482e5a6523b70537a9abf6a8ce0c6ec5",
+    "web/evidence/method-probe/definition-metadata.json": "dc2dc86c3ee4c1aec272207c945b04bfad1831ee6484808e205e725a8e620270"
+  },
+  "gen2_workflow_line_endings": {
+    "sha256_lf": "b491462f8678710575622765fd5c4b6b5f723e861384bbe529cc2e6587c343e9",
+    "sha256_lf_converted_to_crlf": "6901fe4709929a6b88b6ccd65a8671b5a9267fbec93d5b9dfc023d0cb7f5f6ac",
+    "matches_author_recorded_run_hash": true,
+    "note": "Reproducible byte-format explanation, not independent attestation of the historical execution."
+  },
+  "limitations": [
+    "The brief-question mapping is authored before the run, not automatically proven complete by NLP.",
+    "Quoted definitions and structured reference text are checked; source truth is not.",
+    "Inspected is a supplied provenance claim, not independent verification by this program.",
+    "Causal, efficiency and pilot claims remain unsupported by this bounded gate.",
+    "Gen 2 availability output is shown as context, not its CD decision or a fair agent comparison."
+  ]
+}

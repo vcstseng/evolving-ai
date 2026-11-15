@@ -10,6 +10,6 @@
 
 本輪補充：[來源指紋](../source-attribution.json)、[校正等價對應](../../method-probe/revision-1.md)、[校正數值](../../method-probe/revision-1.json)、[作者回應](response.md)、[方案 v3](../v3/proposal.md)。
 
-後續設計與檢查（以下 main 連結會隨未來提交變動）：[Gen 3 候選設計](https://github.com/vcstseng/evolving-ai/blob/main/organization/versions/GEN3_CANDIDATE.md)、[補充檢查腳本](https://github.com/vcstseng/evolving-ai/blob/main/scripts/check_f03_revision.py)、[最新進度](https://github.com/vcstseng/evolving-ai/blob/main/docs/PROGRESS.md)。
+後續設計與檢查（固定於 3381927，描述當時的設計與進度；不是本次 Gen 3 實作）：[Gen 3 候選設計](https://github.com/vcstseng/evolving-ai/blob/338192761c7a23293afb6163c9b93c54c78f88d5/organization/versions/GEN3_CANDIDATE.md)、[補充檢查腳本](https://github.com/vcstseng/evolving-ai/blob/338192761c7a23293afb6163c9b93c54c78f88d5/scripts/check_f03_revision.py)、[最新進度](https://github.com/vcstseng/evolving-ai/blob/338192761c7a23293afb6163c9b93c54c78f88d5/docs/PROGRESS.md)。
 
 公開檔案仍不能證明原始角色執行過程，讀檔也不等於執行測試。原始 run 沒有發布。

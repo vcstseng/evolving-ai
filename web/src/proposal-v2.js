@@ -2,7 +2,7 @@ const escapeHtml=value=>String(value).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&
 export const proposalUrl=(lang,version)=>`?lang=${lang}&view=case&case=f03&proposal=${version}#solution`;
 export function versionLinks(lang,selected){
   const t=(zh,en)=>lang==='zh'?zh:en;
-  const versions=[['v3',t('v3 · 方案修訂 · 待審查','v3 · Editorial revision · Review pending')],['v2',t('v2 · Gen 2 · 複審已收到','v2 · Gen 2 · Re-review received')],['v1',t('v1 · Gen 1 · 原版保留','v1 · Gen 1 · Original preserved')]];
+  const versions=[['v3',t('v3 · 方案修訂 · 複審已收到','v3 · Editorial revision · Re-review received')],['v2',t('v2 · Gen 2 · 複審已收到','v2 · Gen 2 · Re-review received')],['v1',t('v1 · Gen 1 · 原版保留','v1 · Gen 1 · Original preserved')]];
   return `<nav class="proposal-versions" aria-label="${t('方案版本','Proposal versions')}">${versions.map(([v,label])=>`<a href="${proposalUrl(lang,v)}" ${selected===v?'aria-current="page"':''}>${label}</a>`).join('')}</nav>`;
 }
 export function renderV2Shell(lang){
