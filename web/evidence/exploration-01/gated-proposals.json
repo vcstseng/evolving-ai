@@ -1,0 +1,65 @@
+[
+  {
+    "case_id": "E01",
+    "comparability": "no",
+    "rate_conclusion_supported": false,
+    "original_question_fully_answered": false,
+    "numbers": {
+      "baseline": "2000",
+      "actual": "2500",
+      "variance": "500"
+    },
+    "proposal": "按表值可交成本增加五百的受限計算；人工口徑明示不同，閘門不允許真實率差結論。先取兩期薪酬構成並對帳，原題保留未完成。",
+    "evidence_refs": [
+      "E01-metadata.json:hourly_rate_comparison",
+      "E01-metadata.json:evidence_sources.fixture.text"
+    ],
+    "gate_decision": "conditional_delivery",
+    "gate_level": 1,
+    "limitations": [
+      "同一作者、同一對話依 gate 整理；非獨立模型、非六角色新實跑；來源未驗真。"
+    ]
+  },
+  {
+    "case_id": "E02",
+    "comparability": "unknown",
+    "rate_conclusion_supported": false,
+    "original_question_fully_answered": false,
+    "numbers": {
+      "baseline": "2000",
+      "actual": "2750",
+      "variance": "750"
+    },
+    "proposal": "可交成本增加七百五十及產量五百、率項二百五十的機械橋接。人工率定義未知，閘門不允許把名目欄位差當同口徑率差；先補定義，原題未完成。",
+    "evidence_refs": [
+      "E02-metadata.json:evidence_sources.fixture.text",
+      "E02-calculation.json:fixed_effects"
+    ],
+    "gate_decision": "conditional_delivery",
+    "gate_level": 1,
+    "limitations": [
+      "同一作者、同一對話依 gate 整理；非獨立模型、非六角色新實跑；來源未驗真。"
+    ]
+  },
+  {
+    "case_id": "E03",
+    "comparability": "no",
+    "rate_conclusion_supported": false,
+    "original_question_fully_answered": false,
+    "numbers": {
+      "baseline": "2000",
+      "actual": "2500",
+      "variance": "500"
+    },
+    "proposal": "輸入已提供同義詞對帳，但本閘門不支援不同文字定義的對帳，rate_conclusion 仍被阻擋。只保留成本增加五百的機械計算，把對帳交人工覆核；不再次索取已提供的同一資料，但依此閘門仍無法完成所求率差結論。",
+    "evidence_refs": [
+      "E03-metadata.json:comparability.hourly_rate.reconciliation_ref",
+      "E03-metadata.json:evidence_sources.fixture.text"
+    ],
+    "gate_decision": "conditional_delivery",
+    "gate_level": 1,
+    "limitations": [
+      "同一作者、同一對話依 gate 整理；非獨立模型、非六角色新實跑；來源未驗真。"
+    ]
+  }
+]

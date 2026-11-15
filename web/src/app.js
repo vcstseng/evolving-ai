@@ -1,8 +1,8 @@
-import { attachProposalV3 } from './proposal-v3.js?v=gen3-gate-1';
-import { renderCase } from './case.js?v=gen3-gate-1';
+import { attachProposalV3 } from './proposal-v3.js?v=exploration-01';
+import { renderCase } from './case.js?v=exploration-01';
 import { attachWorkflow } from './workflow.js';
-import { attachProposalV2 } from './proposal-v2.js?v=gen3-gate-1';
-import { renderCases } from './cases.js?v=gen3-gate-1';
+import { attachProposalV2 } from './proposal-v2.js?v=exploration-01';
+import { renderCases } from './cases.js?v=exploration-01';
 const $=s=>document.querySelector(s);
 let lang=new URLSearchParams(location.search).get('lang')==='en'?'en':'zh';
 let active=0;

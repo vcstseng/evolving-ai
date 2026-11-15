@@ -1,0 +1,274 @@
+{
+  "schema": 1,
+  "generation": "gen3",
+  "requested_decision": "人工單價是否提高？先判斷兩期口徑是否可比，再提出合理下一步；不要求因果、效率或節省判斷。",
+  "questions": [
+    {
+      "id": "rate",
+      "text": "人工單價是否提高，兩期口徑是否可比？"
+    },
+    {
+      "id": "next",
+      "text": "應採取什麼下一步？"
+    }
+  ],
+  "uncovered_questions": [],
+  "run_level": 1,
+  "claim_ids": [
+    "rate_conclusion",
+    "next_evidence",
+    "conditional_numbers"
+  ],
+  "claims": [
+    {
+      "id": "rate_conclusion",
+      "kind": "rate_change",
+      "required": true,
+      "answers": [
+        "rate"
+      ],
+      "status": "blocked",
+      "blockers": [
+        "hourly_rate"
+      ],
+      "level": 1,
+      "qualification": "Conditional on supplied declarations, not source truth or business validity."
+    },
+    {
+      "id": "next_evidence",
+      "kind": "evidence_plan",
+      "required": true,
+      "answers": [
+        "next"
+      ],
+      "status": "permitted",
+      "blockers": [],
+      "level": 1,
+      "qualification": "Supplied-number arithmetic / evidence planning only."
+    },
+    {
+      "id": "conditional_numbers",
+      "kind": "conditional_arithmetic",
+      "required": false,
+      "answers": [
+        "rate"
+      ],
+      "status": "permitted",
+      "blockers": [],
+      "level": 2,
+      "qualification": "Supplied-number arithmetic / evidence planning only."
+    }
+  ],
+  "comparability": [
+    {
+      "field": "periods",
+      "status": "yes",
+      "reason": "Consistent structured declaration with identifiable references; truth is unverified.",
+      "baseline_definition": "periods on the same declared basis",
+      "actual_definition": "periods on the same declared basis",
+      "source_refs": [
+        "fixture"
+      ],
+      "source_owner_or_unknown": [
+        "Exploration fixture author, not independent verification"
+      ],
+      "reported_verification": "inspected",
+      "verification_by_this_tool": "structure_and_consistency_only",
+      "affected_claim_ids": [
+        "rate_conclusion",
+        "next_evidence",
+        "conditional_numbers"
+      ],
+      "resolution": "No declared discrepancy; source truth remains unverified."
+    },
+    {
+      "field": "units",
+      "status": "yes",
+      "reason": "Consistent structured declaration with identifiable references; truth is unverified.",
+      "baseline_definition": "units on the same declared basis",
+      "actual_definition": "units on the same declared basis",
+      "source_refs": [
+        "fixture"
+      ],
+      "source_owner_or_unknown": [
+        "Exploration fixture author, not independent verification"
+      ],
+      "reported_verification": "inspected",
+      "verification_by_this_tool": "structure_and_consistency_only",
+      "affected_claim_ids": [
+        "rate_conclusion",
+        "next_evidence",
+        "conditional_numbers"
+      ],
+      "resolution": "No declared discrepancy; source truth remains unverified."
+    },
+    {
+      "field": "material_price",
+      "status": "yes",
+      "reason": "Consistent structured declaration with identifiable references; truth is unverified.",
+      "baseline_definition": "material_price on the same declared basis",
+      "actual_definition": "material_price on the same declared basis",
+      "source_refs": [
+        "fixture"
+      ],
+      "source_owner_or_unknown": [
+        "Exploration fixture author, not independent verification"
+      ],
+      "reported_verification": "inspected",
+      "verification_by_this_tool": "structure_and_consistency_only",
+      "affected_claim_ids": [
+        "next_evidence",
+        "conditional_numbers"
+      ],
+      "resolution": "No declared discrepancy; source truth remains unverified."
+    },
+    {
+      "field": "material_per_unit",
+      "status": "yes",
+      "reason": "Consistent structured declaration with identifiable references; truth is unverified.",
+      "baseline_definition": "material_per_unit on the same declared basis",
+      "actual_definition": "material_per_unit on the same declared basis",
+      "source_refs": [
+        "fixture"
+      ],
+      "source_owner_or_unknown": [
+        "Exploration fixture author, not independent verification"
+      ],
+      "reported_verification": "inspected",
+      "verification_by_this_tool": "structure_and_consistency_only",
+      "affected_claim_ids": [
+        "next_evidence",
+        "conditional_numbers"
+      ],
+      "resolution": "No declared discrepancy; source truth remains unverified."
+    },
+    {
+      "field": "hourly_rate",
+      "status": "no",
+      "reason": "Definition texts differ; no normalization is implemented.",
+      "baseline_definition": "base cash wage per recorded labor hour",
+      "actual_definition": "basic pay per logged labour hour",
+      "source_refs": [
+        "fixture"
+      ],
+      "source_owner_or_unknown": [
+        "Exploration fixture author, not independent verification"
+      ],
+      "reported_verification": "inspected",
+      "verification_by_this_tool": "structure_and_consistency_only",
+      "affected_claim_ids": [
+        "rate_conclusion",
+        "next_evidence",
+        "conditional_numbers"
+      ],
+      "resolution": "No declared discrepancy; source truth remains unverified."
+    },
+    {
+      "field": "hours_per_unit",
+      "status": "yes",
+      "reason": "Consistent structured declaration with identifiable references; truth is unverified.",
+      "baseline_definition": "hours_per_unit on the same declared basis",
+      "actual_definition": "hours_per_unit on the same declared basis",
+      "source_refs": [
+        "fixture"
+      ],
+      "source_owner_or_unknown": [
+        "Exploration fixture author, not independent verification"
+      ],
+      "reported_verification": "inspected",
+      "verification_by_this_tool": "structure_and_consistency_only",
+      "affected_claim_ids": [
+        "next_evidence",
+        "conditional_numbers"
+      ],
+      "resolution": "No declared discrepancy; source truth remains unverified."
+    },
+    {
+      "field": "overhead_per_unit",
+      "status": "yes",
+      "reason": "Consistent structured declaration with identifiable references; truth is unverified.",
+      "baseline_definition": "overhead_per_unit on the same declared basis",
+      "actual_definition": "overhead_per_unit on the same declared basis",
+      "source_refs": [
+        "fixture"
+      ],
+      "source_owner_or_unknown": [
+        "Exploration fixture author, not independent verification"
+      ],
+      "reported_verification": "inspected",
+      "verification_by_this_tool": "structure_and_consistency_only",
+      "affected_claim_ids": [
+        "next_evidence",
+        "conditional_numbers"
+      ],
+      "resolution": "No declared discrepancy; source truth remains unverified."
+    }
+  ],
+  "availability": {
+    "source_refs": [
+      "web\\evidence\\exploration-01\\E03.csv",
+      "web\\evidence\\exploration-01\\E03-metadata.json"
+    ],
+    "quality_checks": {
+      "cost_columns_checked": [
+        "hourly_rate",
+        "hours_per_unit",
+        "material_per_unit",
+        "material_price",
+        "overhead_per_unit",
+        "units"
+      ],
+      "rows_checked": 2,
+      "paired_products": [
+        "Synthetic item"
+      ],
+      "numeric_fields_checked": 12,
+      "periods": {
+        "status": "format_checked_not_independently_verified",
+        "days": [
+          30,
+          30
+        ]
+      },
+      "units_definition": "provided_unverified",
+      "hours_per_unit_definition": "provided_unverified",
+      "operational_records": "referenced_not_verified"
+    },
+    "gaps": [],
+    "permitted_uses": [
+      "Validated cost-field arithmetic; supplied metadata is not independently verified."
+    ],
+    "limitations": [
+      "An empty availability-gap list means required declarations were supplied, not that their content is true or business outcomes are verified."
+    ]
+  },
+  "supporting_refs": [
+    "fixture"
+  ],
+  "unresolved_issues": [
+    {
+      "id": "comparability.hourly_rate",
+      "category": "evidence",
+      "detail": "Definition texts differ; no normalization is implemented.",
+      "affected_claim_ids": [
+        "rate_conclusion",
+        "next_evidence",
+        "conditional_numbers"
+      ],
+      "blocking": true
+    }
+  ],
+  "permitted_claims": [
+    "next_evidence",
+    "conditional_numbers"
+  ],
+  "blocked_claims": [
+    "rate_conclusion"
+  ],
+  "requested_decision_answered": false,
+  "decision": "conditional_delivery",
+  "release_status": "conditional_delivery",
+  "review_status": "pending",
+  "business_authorization": "not_granted",
+  "scope_note": "No-gap is scoped to the pinned requested claims. This tool checks structured declarations, not source truth, free-text causal claims or enterprise outcomes."
+}

@@ -211,3 +211,11 @@ UI／UX 整理沿用 web/src/app.js、cases.js、case.js 與 styles.css；沒有
 ## 小型重用對照準備
 - experiments/protocols/TRANSFER_PILOT_V1.md：三組／四案例／兩次的規劃、預算與停止、隔離與分項評分、未決啟動條件；未出題／未執行。
 - experiments/protocols/PILOT.md、README.md：保留原方向，連至收斂後的準備稿。
+
+
+## 三題共享對話探索
+- experiments/protocols/EXPLORATION_01.md：凍結方法、同對話限制、先普通方案後 gate、三題停止規則。
+- web/evidence/exploration-01/：共同題目、三份 CSV／metadata／計算／實際 gate、ordinary-proposals.json、gated-proposals.json、before-gate.json、comparison.json、results.md；公開整理交付，不是原始聊天。
+- scripts/check_exploration_01.py：重現輸入、方法、數字與 gate；不偽稱可重現模型回答或獨立評分。
+- web/src/revision.js：沿用現有區塊加入負向／無差異結果與方案連結；無新 UI 模組。
+- presentation/exploration-01-desktop.png：兩題無差異、一題誤擋的頁面說明截圖。

@@ -1,0 +1,59 @@
+[
+  {
+    "case_id": "E01",
+    "comparability": "no",
+    "rate_conclusion_supported": false,
+    "original_question_fully_answered": false,
+    "numbers": {
+      "baseline": "2000",
+      "actual": "2500",
+      "variance": "500"
+    },
+    "proposal": "按表值成本增加五百，但兩期人工口徑不同，不能由此判定真實基本工資提高。先取福利、加班及分攤構成，重列同口徑率後再回答；現階段交付受限計算及補資料方案。",
+    "evidence_refs": [
+      "E01-metadata.json:hourly_rate_comparison",
+      "E01-metadata.json:evidence_sources.fixture.text"
+    ],
+    "limitations": [
+      "缺薪酬構成，未回答真實率差；不推論變動為零、根因或節省。"
+    ]
+  },
+  {
+    "case_id": "E02",
+    "comparability": "unknown",
+    "rate_conclusion_supported": false,
+    "original_question_fully_answered": false,
+    "numbers": {
+      "baseline": "2000",
+      "actual": "2750",
+      "variance": "750"
+    },
+    "proposal": "提供數值下成本增加七百五十，固定順序中產量五百、人工率二百五十。名目匯出欄位由二十到二十二，不足以確認同口徑人工率提高；先取得兩期薪酬範圍與記錄定義。",
+    "evidence_refs": [
+      "E02-metadata.json:evidence_sources.fixture.text",
+      "E02-calculation.json:fixed_effects"
+    ],
+    "limitations": [
+      "人工率定義未提供，商業率差未知；條件式橋接不是原因或節省。"
+    ]
+  },
+  {
+    "case_id": "E03",
+    "comparability": "yes_with_reconciliation",
+    "rate_conclusion_supported": true,
+    "original_question_fully_answered": true,
+    "numbers": {
+      "baseline": "2000",
+      "actual": "2500",
+      "variance": "500"
+    },
+    "proposal": "依提供且已檢視的對帳，兩個名稱指同一現金工資範圍與同一直接工時，無換算差異。限定於此合成來源，人工率由二十到二十五，提高百分之二十五；一百工時的差異為五百。保留對帳並核對實際薪資表／工時來源即可，不因同義名稱不同而要求重做口徑。",
+    "evidence_refs": [
+      "E03-metadata.json:comparability.hourly_rate.reconciliation_ref",
+      "E03-metadata.json:evidence_sources.fixture.text"
+    ],
+    "limitations": [
+      "結論以提供的對帳為前提，非獨立來源驗真；不推論原因、效率、節省或批准試點。"
+    ]
+  }
+]

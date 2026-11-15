@@ -1,0 +1,39 @@
+{
+  "decision": "人工單價是否提高？先判斷兩期口徑是否可比，再提出合理下一步；不要求因果、效率或節省判斷。",
+  "questions": [
+    {
+      "id": "rate",
+      "text": "人工單價是否提高，兩期口徑是否可比？"
+    },
+    {
+      "id": "next",
+      "text": "應採取什麼下一步？"
+    }
+  ],
+  "claims": [
+    {
+      "id": "rate_conclusion",
+      "kind": "rate_change",
+      "required": true,
+      "answers": [
+        "rate"
+      ]
+    },
+    {
+      "id": "next_evidence",
+      "kind": "evidence_plan",
+      "required": true,
+      "answers": [
+        "next"
+      ]
+    },
+    {
+      "id": "conditional_numbers",
+      "kind": "conditional_arithmetic",
+      "required": false,
+      "answers": [
+        "rate"
+      ]
+    }
+  ]
+}

@@ -6,6 +6,8 @@ AI 組織能力發展研究。工作名稱：Evolving AI Consulting Firm。
 
 ## 目前進度
 
+最新探索：依使用者選擇，以同一對話完成三個新合成實例的普通方案／套用固定 Gen 3 gate 後方案，**兩題未觀察到差異、一題誤擋**。詳 [結果與六份整理方案](web/evidence/exploration-01/results.md)。不是獨立兩組或未見測試，沒有分組成本；本輪不修改方法迎合結果，先停止擴充。
+
 最新：Gen 3 結構化閘門與獨立本機交接器已實作，固定原題／子問題／主張、解析引用、分離 L0–L3 並聚合，保留 Gen 2。詳 [操作與限制](docs/GEN3_IMPLEMENTATION.md)／[已知開發情境](web/evidence/gen3/development-results.json)。收到的 [v3 設計複審與回應](web/evidence/f03/review-v3/review-and-response.md) 沒有審過本實作；[v3 小修補充](web/evidence/f03/v3-supplement-1.md) 另存。已解釋 [LF／CRLF 雜湊差異](web/evidence/f03/source-line-endings.md)。沒有新的模型角色案件、未見實驗、成本優越或企業成效；原固定包不變。
 
 Layer 1 中英文首頁原型已完成，延續 Startup Radar／Capability Store 的視覺風格。Layer 2 已加入 F03 歷史合成案例整理，含方案與 Claude 驗證交付材料；已加入本機半自動案件交接器，完成 Gen 1 與 Gen 2 的同案交付；尚無自主 LLM 調度、獨立多 Agent、能力演化或企業成效結果。

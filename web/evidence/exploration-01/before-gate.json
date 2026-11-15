@@ -1,0 +1,18 @@
+{
+  "date": "2026-11-15",
+  "method_commit": "2549c7894e41eb358b1fd12a8f2d5b7f3441e8da",
+  "scope": "Shared conversation exploration; ordinary proposals saved before gate calls, not independent/blinded.",
+  "sha256": {
+    "request.json": "901660d6cb83e61f2d03086dfb92499649e4de78586410a842c6bf972ea84055",
+    "ordinary-proposals.json": "4a0885a318f1f30e6b09580662a574b585262ad58fadd37299c03fa65362eb22",
+    "E01.csv": "f05f292bb8a75b489d67cf1b1adb08669b25d5f0e4c7c10c48083060448b7b80",
+    "E01-metadata.json": "a76168e1fdbf12ecb750b91adc78900b9fdea632e7b47ca4e78ca2fdef48e724",
+    "E01-calculation.json": "368861c0945b785f54be5ae642dbd7f6232bad55de242a7b9bb3eec7cdcb4f52",
+    "E02.csv": "d3b71d93154d9d7e6d9071ce859f225c04cb4ff4bffeb719635ffcec8ba2776f",
+    "E02-metadata.json": "bb8270ff0426f91ce78b7efdf024c0150d882b68e6945b0adae67afe3acfca41",
+    "E02-calculation.json": "0f04e3d6f43d0417d1f22abd9377e32203126723c9c842999e53ffb64f655c2a",
+    "E03.csv": "f05f292bb8a75b489d67cf1b1adb08669b25d5f0e4c7c10c48083060448b7b80",
+    "E03-metadata.json": "882a5c28247998b60e34bbd31557025de980a4f2baefdfd5722a21142089bef8",
+    "E03-calculation.json": "368861c0945b785f54be5ae642dbd7f6232bad55de242a7b9bb3eec7cdcb4f52"
+  }
+}

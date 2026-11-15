@@ -1,0 +1,95 @@
+{
+  "totals": {
+    "baseline": "2000",
+    "actual": "2750",
+    "variance": "750",
+    "flex_baseline": "2500",
+    "volume_effect": "500",
+    "non_volume_variance": "250"
+  },
+  "fixed_order": [
+    "units",
+    "material_price",
+    "material_per_unit",
+    "hourly_rate",
+    "hours_per_unit",
+    "overhead_per_unit"
+  ],
+  "fixed_effects": {
+    "units": "500",
+    "material_price": "0",
+    "material_per_unit": "0",
+    "hourly_rate": "250",
+    "hours_per_unit": "0",
+    "overhead_per_unit": "0"
+  },
+  "by_product": [
+    {
+      "product": "Synthetic item",
+      "baseline": "2000",
+      "actual": "2750",
+      "flex_baseline": "2500",
+      "volume_effect": "500",
+      "non_volume_variance": "250",
+      "effects": {
+        "units": "500",
+        "material_price": "0",
+        "material_per_unit": "0",
+        "hourly_rate": "250",
+        "hours_per_unit": "0",
+        "overhead_per_unit": "0"
+      }
+    }
+  ],
+  "sensitivity": {
+    "orders": 720,
+    "effects": {
+      "units": {
+        "min": "500",
+        "max": "550",
+        "mean": "525",
+        "mean_fraction": "525"
+      },
+      "material_price": {
+        "min": "0",
+        "max": "0",
+        "mean": "0",
+        "mean_fraction": "0"
+      },
+      "material_per_unit": {
+        "min": "0",
+        "max": "0",
+        "mean": "0",
+        "mean_fraction": "0"
+      },
+      "hourly_rate": {
+        "min": "200",
+        "max": "250",
+        "mean": "225",
+        "mean_fraction": "225"
+      },
+      "hours_per_unit": {
+        "min": "0",
+        "max": "0",
+        "mean": "0",
+        "mean_fraction": "0"
+      },
+      "overhead_per_unit": {
+        "min": "0",
+        "max": "0",
+        "mean": "0",
+        "mean_fraction": "0"
+      }
+    },
+    "hours_largest_in_every_order": false,
+    "adverse_drivers_by_mean": [
+      "units",
+      "hourly_rate"
+    ]
+  },
+  "limitations": [
+    "Flexible baseline assumes the supplied per-unit cost model; it does not distinguish true fixed costs.",
+    "Order means are rounded to 12 decimal places; mean_fraction retains the exact rational value.",
+    "Accounting attribution and priority signals do not establish causes, avoidable waste or savings."
+  ]
+}
