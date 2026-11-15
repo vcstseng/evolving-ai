@@ -15,6 +15,13 @@ def read(path):
     return json.loads(path.read_text(encoding='utf-8'))
 
 
+def canonical_gate(value):
+    # Only filesystem references differ across Windows/Linux; preserve all decisions and evidence.
+    value = json.loads(json.dumps(value))
+    value['availability']['source_refs'] = [p.replace('\\', '/') for p in value['availability']['source_refs']]
+    return value
+
+
 def main():
     os.chdir(ROOT)
     folder = Path('web/evidence/exploration-01')
@@ -29,7 +36,7 @@ def main():
         calc = analyze(folder / (name + '.csv'))
         assert read(folder / (name + '-calculation.json')) == calc
         gate = assess(folder / (name + '.csv'), folder / (name + '-metadata.json'), request, brief=request['decision'])
-        assert read(folder / (name + '-gate.json')) == gate
+        assert canonical_gate(read(folder / (name + '-gate.json'))) == canonical_gate(gate), name
         for item in ordinary + gated:
             if item['case_id'] == name:
                 assert item['numbers'] == {k: calc['totals'][k] for k in ('baseline', 'actual', 'variance')}
